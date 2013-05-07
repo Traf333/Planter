@@ -1,0 +1,12 @@
+= content_for :search do
+  .well.sidebar-nav
+    ul.nav.nav-list
+      li.nav-header Личный кабинет
+      li
+        = link_to 'Мой профиль', profile_path
+      - if current_user.is_seller
+        li.nav-header Участник
+        li
+          = link_to 'Моя компания', profile_member_path
+        li
+          = link_to 'Управление каталогом', profile_catalog_path

@@ -1,0 +1,71 @@
+doctype
+html lang="en"
+  head
+    meta charset="utf-8"
+    meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible"
+    meta content="width=(device-width,)initial-scale=1.0" name="viewport"
+    /! <title><haml:loud> content_for?(:title) ? yield(:title) : &quot;Plants&quot; </haml:loud></title>
+    = csrf_meta_tags
+    /! Le HTML5 shim, for IE6-8 support of HTML elements
+    /![if lt IE 9]
+    script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"
+    = stylesheet_link_tag 'application', :media => "all"
+    = javascript_include_tag 'application'
+    /! For third-generation iPad with high-resolution Retina display:
+    /! Size should be 144 x 144 pixels
+    = favicon_link_tag 'images/apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144'
+    /! For iPhone with high-resolution Retina display:
+    /! Size should be 114 x 114 pixels
+    = favicon_link_tag 'images/apple-touch-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114'
+    /! For first- and second-generation iPad:
+    /! Size should be 72 x 72 pixels
+    = favicon_link_tag 'images/apple-touch-icon-72x72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72'
+    /! For non-Retina iPhone, iPod Touch, and Android 2.1+ devices:
+    /! Size should be 57 x 57 pixels
+    = favicon_link_tag 'images/apple-touch-icon-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png'
+    /! For all other devices
+    /! Size should be 32 x 32 pixels
+    = favicon_link_tag 'favicon.ico', :rel => 'shortcut icon'
+  body
+    .navbar.navbar-inverse.navbar-fluid-top
+      .navbar-inner
+        .container-fluid
+          a.btn.btn-navbar data-target=".nav-collapse" data-toggle="collapse"
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          /! <a class="brand" href="#">Plants</a>
+          .container-fluid.nav-collapse
+            ul.nav
+              li
+                = link_to "Выход", "/auth/logout", method: :delete
+          /! /.nav-collapse
+    .container-fluid
+      .row-fluid
+        .span3
+          .well.sidebar-nav
+            ul.nav.nav-list
+              li.nav-header Общее
+              li= link_to "Пользователи", control_users_path
+              /! <li><haml:loud> link_to &quot;Растения&quot;, &quot;/&quot;  </haml:loud></li>
+              li.nav-header Справочники
+              li= link_to "Страны", control_countries_path
+              li= link_to "Регионы", control_regions_path
+              li.nav-header Растения
+              li= link_to "Характеристики растений", control_plant_features_path
+              li= link_to "Категории", control_plant_categories_path
+              li= link_to "Род", control_genus_path
+              li= link_to "Каталог", control_plants_path
+              li.nav-header Участники
+              li= link_to "Каталог", control_members_path
+              li= link_to "Категории", control_member_categories_path
+          /! /.well
+        /! /span
+        .span9
+          = bootstrap_flash
+          = yield
+      /! /row
+      footer
+        /! <p>&copy; Plants 2013</p>
+      #modals-container
+    /! /container

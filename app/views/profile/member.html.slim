@@ -1,0 +1,88 @@
+= javascript_include_tag 'control/members'
+h1 Моя компания
+= render 'shared/profile_menu'
+script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGWSI8xlBZIb9GX1p_IqbgNKQbqXNpfBg&sensor=false" type="text/javascript"
+#member
+  = nested_form_for(@member, :url => { :action => 'update_member' }, :html => {:class => "form-horizontal"}) do |f|
+    = f.hidden_field :id
+    - if @member.errors.any?
+      #error_explanation.alert.alert-error
+        ul
+          - @member.errors.full_messages.each do |msg|
+            li= msg
+    = f.hidden_field :user_id
+    fieldset
+      legend Информация об участнике
+      .control-group
+        label.control-label= f.label :name
+        .controls
+          = f.text_field :name
+      .control-group
+        label.control-label= f.label :member_tariff_id
+        .controls
+          = f.select :member_tariff_id, options_from_collection_for_select(MemberTariff.all, 'id', 'name', @member.member_tariff_id)
+      .control-group
+        label.control-label= f.label :country_id
+        .controls
+          = f.select :country_id, options_from_collection_for_select(Country.all, :id, :name, @member.country_id)
+      .control-group
+        label.control-label= f.label :image_id
+        .controls
+          input#member-logo-file type="file"
+          = hidden_field_tag :logo_id
+          div
+            - if @member.image
+              = image_tag @member.image.picture(:thumb), :id => 'member-logo'
+            - else
+              = image_tag '', :id => 'member-logo', :style => 'display:none;'
+      .control-group
+        label.control-label= f.label :description
+        .controls
+          = f.text_area :description, :rows => 10
+      legend Категории
+      #categories
+        - for category in MemberCategory.all
+          .category
+            = check_box_tag "member[member_category_ids][]", category.id, @member.member_categories.include?(category)
+            = category.name
+      legend Регионы
+      #regions
+        .list
+          - if @member.regions.count > 0
+            - @member.regions.each do |region|
+              .region
+                = select_tag 'countries', options_from_collection_for_select(Country.all, :id, :name, region.country_id), onchange => 'loadRegions(this)'
+                = select_tag "member[region_ids][]", options_from_collection_for_select(Region.all, :id, :name, region.id), :class => 'regions-select'
+                a.remove-region-btn.btn.btn-danger.btn-small Удалить
+          - else
+            .region
+              = select_tag 'countries', options_from_collection_for_select(Country.all, :id, :name), onchange => 'loadRegions(this)' 
+              = select_tag "member[region_ids][]", options_from_collection_for_select(Region.all, :id, :name), :class => 'regions-select'
+        a.btn onclick="addMemberRegion()"
+      legend Адреса
+      #addresses
+        .list
+          = f.fields_for :member_addresses do |builder|
+            .address
+              = render '/control/members/address', :f => builder
+          = f.link_to_add "Добавить адрес", :member_addresses, :class => 'btn'
+      legend Контакты
+      .control-group
+        label.control-label= f.label :site
+        .controls
+          = f.text_field :site
+      .control-group
+        label.control-label= f.label :phone
+        .controls
+          = f.text_field :phone
+      .control-group
+        label.control-label= f.label :email
+        .controls
+          = f.text_field :email
+      .control-group
+        label.control-label= f.label :contacts
+        .controls
+          = f.text_area :contacts, :rows => 10
+    .form-actions
+      = f.submit 'Сохранить', :class => 'btn btn-primary'
+      = link_to 'Отмена', control_members_path, :class => 'btn'
