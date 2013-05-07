@@ -1,0 +1,36 @@
+= form_for([:control, @genu], :html => {:class => "form-horizontal"}) do |f|
+  - if @genu.errors.any?
+    #error_explanation.alert.alert-error
+      ul
+        - @genu.errors.full_messages.each do |msg|
+          li= msg
+  fieldset
+    legend
+    .control-group
+      label.control-label= f.label :plant_category_id
+      .controls
+        = f.select :plant_category_id, categories_list
+    .control-group
+      label.control-label= f.label :name
+      .controls
+        = f.text_field :name, :placeholder => ''
+    .control-group
+      label.control-label= f.label :lat_name
+      .controls
+        = f.text_field :lat_name, :placeholder => ''
+    .control-group
+      label.control-label= f.label :description
+      .controls
+        = f.text_area :description, :rows => 5
+    legend Синонимы
+    .control-group
+      label.control-label= f.label :synonyms
+      .controls
+        = f.text_field :synonyms
+    .control-group
+      label.control-label= f.label :lat_synonyms
+      .controls
+        = f.text_field :lat_synonyms
+  .form-actions
+    = f.submit 'Сохранить', :class => 'btn btn-primary'
+    = link_to 'Отмена', control_genus_path, :class => 'btn'

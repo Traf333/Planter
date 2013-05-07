@@ -1,0 +1,16 @@
+= form_for([:control, @country], :html => {:class => "form-horizontal"}) do |f|
+  - if @country.errors.any?
+    #error_explanation.alert.alert-error
+      ul
+        - @country.errors.full_messages.each do |msg|
+          li= msg
+  p#notice= notice
+  fieldset
+    legend Данные по стране
+    .control-group
+      label.control-label= f.label :name
+      .controls
+        = f.text_field :name, :placeholder => 'Россия'
+  .form-actions
+    = f.submit 'Сохранить', :class => 'btn btn-primary'
+    = link_to 'Отмена', control_countries_path, :class => 'btn'

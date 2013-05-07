@@ -1,0 +1,19 @@
+= form_for([:control, @member_category], :html => {:class => "form-horizontal"}) do |f|
+  - if @member_category.errors.any?
+    #error_explanation.alert.alert-error
+      ul
+        - @member_category.errors.full_messages.each do |msg|
+          li= msg
+  fieldset
+    legend
+    .control-group
+      label.control-label= f.label :name
+      .controls
+        = f.text_field :name
+    .control-group
+      label.control-label= f.label :description
+      .controls
+        = f.text_field :description
+  .form-actions
+    = f.submit 'Сохранить', :class => 'btn btn-primary'
+    = link_to 'Отмена', control_member_categories_path, :class => 'btn'

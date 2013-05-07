@@ -1,0 +1,10 @@
+p#notice= notice
+p
+  b Name:
+  = @member_category.name
+p
+  b Description:
+  = @member_category.description
+=' link_to 'Edit', edit_member_category_path(@member_category)
+' |
+= link_to 'Back', member_categories_path

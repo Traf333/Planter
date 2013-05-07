@@ -1,0 +1,15 @@
+h1 Категории
+.table-control
+  = link_to 'Добавить категорию', new_control_member_category_path, :class => 'btn btn-primary'
+table.table.table-striped.table-hover
+  tr
+    th= sortable :name, 'Название'
+    th= sortable :description, 'Описание'
+    th
+  - @member_categories.each do |member_category|
+    tr
+      td= member_category.name
+      td= member_category.description
+      td style="text-align: right;"
+        = link_to 'Изменить', edit_control_member_category_path(member_category), :class => 'btn btn-small'
+        = link_to 'Удалить', control_member_category_path(member_category), method: :delete, data: {confirm: 'Вы уверены?'}, :class => 'btn btn-danger btn-small'
