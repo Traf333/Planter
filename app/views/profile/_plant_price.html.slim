@@ -13,10 +13,9 @@ td.note
   = @plant_price.note
 td.prices
   select.price-select.multiselect multiple="multiple"
-    / - current_user.member.member_prices.each do |member_price|
-      | <option value="#{member_price.id}"
-      | \#{'selected="true"' if member_price.plant_prices.where(:id => @plant_price.id).count > 0}>
-      | \#{member_price.name}
+    - current_user.member.member_prices.each do |member_price|
+      option value=member_price.id selected="#{true  if member_price.plant_prices.where(:id => @plant_price.id).count > 0}"
+      = member_price.name
 td.remove-btn
   a.btn.btn-small onclick="addNewPrice(this);"
   a.btn.btn-danger.btn-small onclick="removePrice(this);"
