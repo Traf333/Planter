@@ -1,0 +1,15 @@
+tr
+  td
+    strong= @plant_category[:id]
+  td
+    .pull-left style="width: #{30 * @plant_category[:level_count]}px"
+    .pull-left
+      = link_to edit_control_plant_category_path(@plant_category[:category_object]) do
+        = "#{@plant_category[:category_object].name} (#{@plant_category[:category_object].lat_name})"
+    .pull-right
+      = link_to 'Добавить', new_control_plant_category_path(:plant_category_id => @plant_category[:id]), :class => 'btn btn-small'
+      = link_to 'Удалить', control_plant_category_path(@plant_category[:category_object]), method: :delete, :class => 'btn btn-danger btn-small'
+    div style="clear: both;"
+- @plant_category[:children].each do |plant_category|
+  - @plant_category = plant_category
+  = render 'control/plant_categories/category'

@@ -1,0 +1,62 @@
+= form_for([:control, @user], :html => {:class => "form-horizontal"}) do |f|
+  - if @user.errors.any?
+    #error_explanation.alert.alert-error
+      ul
+        - @user.errors.full_messages.each do |msg|
+          li= msg
+  p#notice= notice
+  fieldset
+    legend Личные данные
+    .control-group
+      label.control-label= f.label :email
+      .controls
+        = f.email_field :email, :placeholder => 'ivan@mail.ru'
+    .control-group
+      label.control-label= f.label :password
+      .controls
+        = f.password_field :password
+    .control-group
+      label.control-label= f.label :password_confirmation
+      .controls
+        = f.password_field :password_confirmation
+    .control-group
+      label.control-label= f.label :name
+      .controls
+        = f.text_field :name
+    .control-group
+      label.control-label= f.label :last_name
+      .controls
+        = f.text_field :last_name
+    .control-group
+      label.control-label= f.label :surname
+      .controls
+        = f.text_field :surname
+    .control-group
+      label.control-label= f.label :address
+      .controls
+        = f.text_field :address
+    legend Доступ
+    .control-group
+      label.control-label Роль
+      .controls
+        = f.select :role_id, Role.all.map { |r| [r.title, r.id] }
+    legend Контактная информация
+    .control-group
+      label.control-label= f.label :phone
+      .controls
+        = f.text_field :phone
+    .control-group
+      label.control-label= f.label :skype
+      .controls
+        = f.text_field :skype
+    .control-group
+      label.control-label= f.label :icq
+      .controls
+        = f.text_field :icq
+    .control-group
+      label.control-label= f.label :site
+      .controls
+        = f.text_field :site
+  .form-actions
+    = f.submit 'Сохранить', :class => 'btn btn-primary'
+    = link_to 'Отмена', control_users_path, :class => 'btn'

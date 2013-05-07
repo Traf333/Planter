@@ -1,0 +1,10 @@
+h1 Категории растений
+.table-control
+  = link_to 'Добавить категорию', new_control_plant_category_path, :class => 'btn btn-primary'
+table#plants-categories.table.table-striped.table-hover
+  tr
+    th= sortable :id, '#'
+    th= sortable :name, 'Название'
+  - @plant_categories.each do |plant_category|
+    - @plant_category = plant_category
+    = render 'control/plant_categories/category'

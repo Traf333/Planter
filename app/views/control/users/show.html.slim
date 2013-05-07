@@ -1,0 +1,37 @@
+p
+  strong
+    = t 'activerecord.attributes.user.name'
+    ' :
+  = @user.name
+p
+  strong
+    = t 'activerecord.attributes.user.last_name'
+    ' :
+  = @user.last_name
+p
+  strong
+    = t 'activerecord.attributes.user.surname'
+    ' :
+  = @user.surname
+p
+  strong
+    = t 'activerecord.attributes.user.phone'
+    ' :
+  = @user.phone
+p
+  strong
+    = t 'activerecord.attributes.user.address'
+    ' :
+  = @user.address
+p
+  strong
+    = t 'activerecord.attributes.user.email'
+    ' :
+  = @user.email
+p
+  strong
+    = t 'activerecord.attributes.user.site'
+    ' :
+  = @user.site
+= link_to 'Изменить', edit_user_path(@user), :class => 'btn'
+= link_to 'Ок', users_path, :class => 'btn btn-success'

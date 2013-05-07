@@ -1,0 +1,28 @@
+= javascript_include_tag 'control/plant_categories'
+= form_for([:control, @plant_category], :html => {:class => "form-horizontal"}) do |f|
+  - if @plant_category.errors.any?
+    #error_explanation.alert.alert-error
+      ul
+        - @plant_category.errors.full_messages.each do |msg|
+          li= msg
+  fieldset
+    legend
+    .control-group
+      label.control-label= f.label :plant_category
+      .controls
+        = f.select :plant_category_id, categories_list, :include_blank => 'Не выбрано'
+    .control-group
+      label.control-label= f.label :name
+      .controls
+        = f.text_field :name, :placeholder => ''
+    .control-group
+      label.control-label= f.label :lat_name
+      .controls
+        = f.text_field :lat_name, :placeholder => ''
+    .control-group
+      label.control-label= f.label :description
+      .controls
+        = f.text_area :description, :rows => 5
+  .form-actions
+    = f.submit 'Сохранить', :class => 'btn btn-primary'
+    = link_to 'Отмена', control_plant_categories_path, :class => 'btn'

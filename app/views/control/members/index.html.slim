@@ -1,0 +1,29 @@
+h1 Участники
+.table-control
+  = link_to 'Добавить участника', new_control_member_path, :class => 'btn btn-primary'
+table.table.table-striped.table-hover
+  tr
+    th= sortable :id, '#'
+    th= sortable :name, 'Название'
+    th= sortable :country_id, 'Страна'
+    th= sortable :is_moderated, 'Модерирован'
+    th= sortable :site, 'Сайт'
+    th= sortable :phone, 'Телефон'
+    th= sortable :email, 'Email'
+    th
+  - @members.each do |member|
+    tr class="#{'success' if member.is_moderated}"
+      td
+        strong= member.id
+      td= member.name
+      td= member.country.name if member.country
+      td= member.is_moderated ? 'Да' : 'Нет'
+      td
+        = link_to member.site, "http://#{member.site}"
+      td= member.phone
+      td
+        = link_to member.email, "mailto:#{member.email}"
+      td.text-right
+        = link_to 'Изменить', edit_control_member_path(member), :class => 'btn btn-small'
+        = link_to 'Удалить', control_member_path(member), method: :delete, data: { confirm: 'Вы уверены?' }, :class => 'btn btn-danger btn-small'
+= will_paginate @members, :renderer => BootstrapPagination::Rails

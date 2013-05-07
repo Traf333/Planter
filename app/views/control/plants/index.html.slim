@@ -1,0 +1,41 @@
+h1 Растения
+.table-control
+  = link_to 'Добавить растение', new_control_plant_path, :class => 'btn btn-primary'
+div
+  form action=control_plants_path method="get"
+    table
+      tr
+        td
+        td Род:
+        td Категория:
+        td
+      tr
+        td
+          = text_field_tag :name, params[:name], :placeholder => 'Название'
+        td
+          = select_tag :genu_id, options_from_collection_for_select(Genu.all, :id, :name, params[:genu_id]), :prompt => 'Все'
+        td
+          = select_tag :plant_category_id, options_for_select(categories_list, params[:plant_category_id]), :prompt => 'Все'
+        td
+          = submit_tag 'Поиск', :class => 'btn btn-primary', :name => nil, :style => 'margin-bottom: 10px;'
+table.table.table-striped.table-hover
+  tr
+    th= sortable :id, '#'
+    th= sortable :plant_id, 'Тип'
+    th= sortable :name, 'Название'
+    th= sortable :lat_name, 'Лат.Название'
+    th
+  - @plants.each do |plant|
+    - is_parent_present = plant.plant.present?
+    tr
+      td
+        strong= plant.id
+      td= is_parent_present ? 'Сорт' : 'Вид'
+      td= plant.name
+      td= plant.lat_name
+      td style="text-align: right;"
+        - unless is_parent_present
+          = link_to 'Добавить сорт', new_control_plant_path(:plant_category_id => plant.plant_category_id, :genu_id => plant.genu_id, :plant_id => plant.id), :class => 'btn btn-small'
+        = link_to 'Изменить', edit_control_plant_path(plant), :class => 'btn btn-small'
+        = link_to 'Удалить', control_plant_path(plant), method: :delete, data: {confirm: 'Вы уверены?'}, :class => 'btn btn-danger btn-small'
+= will_paginate @plants, :renderer => BootstrapPagination::Rails

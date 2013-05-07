@@ -1,0 +1,16 @@
+h1 Характеристики растений
+.table-control
+  = link_to 'Добавить характеристику', new_control_plant_feature_path, :class => 'btn btn-primary'
+table.table.table-striped.table-hover
+  tr
+    th= sortable :id, '#'
+    th= sortable :name, 'Название'
+    th
+  - @plant_features.each do |plant_feature|
+    tr
+      td
+        strong= plant_feature.id
+      td= plant_feature.name
+      td style="text-align: right;"
+        = link_to 'Изменить', edit_control_plant_feature_path(plant_feature), :class => 'btn btn-small'
+        = link_to 'Удалить', control_plant_feature_path(plant_feature), method: :delete, data: { confirm: 'Вы уверены?' }, :class => 'btn btn-danger btn-small'

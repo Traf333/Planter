@@ -1,0 +1,106 @@
+= javascript_include_tag 'control/members'
+script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGWSI8xlBZIb9GX1p_IqbgNKQbqXNpfBg&sensor=false" type="text/javascript"
+#member
+  = nested_form_for([:control, @member], :html => {:class => "form-horizontal"}) do |f|
+    - if @member.errors.any?
+      #error_explanation.alert.alert-error
+        ul
+          - @member.errors.full_messages.each do |msg|
+            li= msg
+    p#notice= notice
+    .tabbable
+      ul.nav.nav-tabs
+        li.active
+          a data-toggle="tab" href="#common-tab" Общее
+        li
+          a data-toggle="tab" href="#categories-tab" Категории
+        li
+          a data-toggle="tab" href="#regions-tab" Регионы
+        li
+          a data-toggle="tab" href="#addresses-tab" Адреса
+        li
+          a data-toggle="tab" href="#contacts-tab" Контакты
+      .tab-content
+        #common-tab.tab-pane.active
+          fieldset
+            .control-group
+              label.control-label= f.label :name
+              .controls
+                = f.text_field :name
+            .control-group
+              label.control-label= f.label :member_tariff_id
+              .controls
+                = f.select :member_tariff_id, options_from_collection_for_select(MemberTariff.all, 'id', 'name', @member.member_tariff_id)
+            .control-group
+              label.control-label= f.label :is_moderated
+              .controls
+                = f.check_box :is_moderated
+            .control-group
+              label.control-label= f.label :user_id
+              .controls
+                = f.select :user_id, options_from_collection_for_select(User.all, :id, :full_name_with_email, @member.user_id), :include_blank => 'Не выбрано'
+            .control-group
+              label.control-label= f.label :country_id
+              .controls
+                = f.select :country_id, options_from_collection_for_select(Country.all, :id, :name, @member.country_id)
+            .control-group
+              label.control-label= f.label :image_id
+              .controls
+                = file_field_tag id: "member-logo-file"
+                = hidden_field_tag :logo_id
+                div
+                  =image_tag @member.image.picture(:thumb), id: "member-logo" if @member.image
+            .control-group
+              label.control-label= f.label :description
+              .controls
+                = f.text_area :description, :rows => 10
+        #categories-tab.tab-pane
+          fieldset
+            #categories
+              - for category in MemberCategory.all
+                .category
+                  = check_box_tag "member[member_category_ids][]", category.id, @member.member_categories.include?(category)
+                  = category.name
+        #regions-tab.tab-pane
+          fieldset
+            #regions
+              .list
+                - if @member.regions.count > 0
+                  - @member.regions.each do |region|
+                    .region
+                      = select_tag 'countries', options_from_collection_for_select(Country.all, :id, :name, region.country_id), :onchange => 'loadRegions(this)'
+                      = select_tag "member[region_ids][]", options_from_collection_for_select(Region.all, :id, :name, region.id), :class => 'regions-select'
+                      a.remove-region-btn.btn.btn-danger.btn-small Удалить
+                - else
+                  .region
+                    = select_tag 'countries', options_from_collection_for_select(Country.all, :id, :name), :onchange => 'loadRegions(this)'
+                    = select_tag "member[region_ids][]", options_from_collection_for_select(Region.all, :id, :name), :class => 'regions-select'
+              a.btn onclick="Members.addRegion()" Добавить регион
+        #addresses-tab.tab-pane
+          fieldset
+            #addresses
+              .list
+                = f.fields_for :member_addresses do |address_form|
+                  = render '/control/members/address', :f => address_form
+                = f.link_to_add "Добавить адрес", :member_addresses, :class => 'btn'
+        #contacts-tab.tab-pane
+          fieldset
+            .control-group
+              label.control-label= f.label :site
+              .controls
+                = f.text_field :site
+            .control-group
+              label.control-label= f.label :phone
+              .controls
+                = f.text_field :phone
+            .control-group
+              label.control-label= f.label :email
+              .controls
+                = f.text_field :email
+            .control-group
+              label.control-label= f.label :contacts
+              .controls
+                = f.text_area :contacts, :rows => 10
+    .form-actions
+      = f.submit 'Сохранить', :class => 'btn btn-primary'
+      = link_to 'Отмена', control_members_path, :class => 'btn'

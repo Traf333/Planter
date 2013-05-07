@@ -1,0 +1,86 @@
+= javascript_include_tag 'control/plants'
+= form_for([:control, @plant], :html => {:class => "form-horizontal"}) do |f|
+  - if @plant.errors.any?
+    #error_explanation.alert.alert-error
+      ul
+        - @plant.errors.full_messages.each do |msg|
+          li= msg
+  p#notice= notice
+  = f.hidden_field :id
+  fieldset
+    legend Данные по растению
+    .control-group
+      label.control-label= f.label :plant_category_id
+      .controls
+        = f.select :plant_category_id, categories_list, {}, :class => 'plant_category_id'
+    .control-group
+      label.control-label= f.label :genu
+      .controls
+        = f.hidden_field :genu_id
+        = text_field_tag :id => "genu", :autocomplete => "off", :placeholder => "Введите название", :value => @plant.genu.name if @plant.genu.present?
+    .control-group
+      label.control-label= f.label :plant_id
+      .controls
+        = f.hidden_field :plant_id
+        = text_field_tag :id => "parent-plant", :autocomplete => "off", :placeholder => "Введите название", :value => @plant.plant.name if @plant.plant.present?
+    legend
+    .control-group
+      label.control-label= f.label :name
+      .controls
+        = f.text_field :name
+    .control-group
+      label.control-label= f.label :lat_name
+      .controls
+        = f.text_field :lat_name
+    .control-group
+      label.control-label= f.label :is_shown_in_catalog
+      .controls
+        = f.check_box :is_shown_in_catalog
+    .control-group
+      label.control-label= f.label :description
+      .controls
+        = f.text_area :description, :rows => 5
+    .control-group
+      label.control-label= f.label :width
+      .controls
+        = f.text_field :width, :placeholder => '3 м - 5 м'
+    .control-group
+      label.control-label= f.label :height
+      .controls
+        = f.text_field :height, :placeholder => '3 м - 5 м'
+    legend
+    .control-group
+      label.control-label= f.label :krone
+      .controls
+        = f.text_field :krone
+    .control-group
+      label.control-label= f.label :leafs
+      .controls
+        = f.text_field :leafs
+    .control-group
+      label.control-label= f.label :flowers
+      .controls
+        = f.text_field :flowers
+    legend Синонимы
+    .control-group
+      label.control-label= f.label :synonyms
+      .controls
+        = f.text_field :synonyms
+    .control-group
+      label.control-label= f.label :lat_synonyms
+      .controls
+        = f.text_field :lat_synonyms
+    legend Картинки
+    #images
+      #controls
+        p.help-block
+          | Выберите файл для загрузки:
+          = file_field_tag :id => "plant-image-file", :multiple => ""
+        #progress-dialog.modal.fade
+          h3 Загрузка...
+          #progress-bar.progress.progress-striped.active
+            .bar
+      #images-container
+  .form-actions
+    = f.submit 'Сохранить', :class => 'btn btn-primary'
+    = link_to 'Отмена', control_plants_path, :class => 'btn'

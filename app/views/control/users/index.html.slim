@@ -1,0 +1,22 @@
+h1 Пользователи
+.table-control
+  = link_to 'Добавить пользователя', new_control_user_path, :class => 'btn btn-primary'
+table.table.table-striped.table-hover
+  tr
+    th= sortable :id, '#'
+    th= sortable :last_name, 'Ф. И. О.'
+    th= sortable :phone, 'Телефон'
+    th= sortable :email, 'E-mail'
+    th
+  - @users.each do |user|
+    tr
+      td
+        strong= user.id
+      td= user.full_name
+      td= user.phone
+      td
+        = link_to user.email, "mailto:#{user.email}"
+      td style="text-align: right"
+        = link_to 'Изменить', edit_control_user_path(user), :class => 'btn btn-small'
+        = link_to 'Удалить', control_user_path(user), method: :delete, data: { confirm: 'Вы уверены?' }, :class => 'btn btn-danger btn-small'
+= will_paginate @users, :renderer => BootstrapPagination::Rails

@@ -1,0 +1,16 @@
+= form_for([:control, @plant_feature], :html => {:class => "form-horizontal"}) do |f|
+  - if @plant_feature.errors.any?
+    #error_explanation.alert.alert-error
+      ul
+        - @plant_feature.errors.full_messages.each do |msg|
+          li= msg
+  p#notice= notice
+  fieldset
+    legend Данные по характеристике
+    .control-group
+      label.control-label= f.label :name
+      .controls
+        = f.text_field :name, :placeholder => 'Отношение к солнцу'
+  .form-actions
+    = f.submit 'Сохранить', :class => 'btn btn-primary'
+    = link_to 'Отмена', control_plant_features_path, :class => 'btn'

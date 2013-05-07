@@ -1,0 +1,19 @@
+h1 Регионы
+.table-control
+  = link_to 'Добавить регион', new_control_region_path, :class => 'btn btn-primary'
+table.table.table-striped.table-hover
+  tr
+    th= sortable :id, '#'
+    th= sortable :name, 'Название'
+    th= sortable :country_id, 'Страна'
+    th
+  - @regions.each do |region|
+    tr
+      td
+        strong= region.id
+      td= region.name
+      td= region.country.name
+      td style="text-align: right;"
+        = link_to 'Изменить', edit_control_region_path(region), :class => 'btn btn-small'
+        = link_to 'Удалить', control_region_path(region), method: :delete, data: { confirm: 'Вы уверены?' }, :class => 'btn btn-danger btn-small'
+= will_paginate @regions, :renderer => BootstrapPagination::Rails

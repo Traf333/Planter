@@ -1,0 +1,13 @@
+p#notice= notice
+p
+  b Name:
+  = @plant_category.name
+p
+  b Lat name:
+  = @plant_category.lat_name
+p
+  b Description:
+  = @plant_category.description
+=' link_to 'Edit', edit_plant_category_path(@plant_category)
+' |
+= link_to 'Back', plant_categories_path

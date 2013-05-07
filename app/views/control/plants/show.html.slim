@@ -1,0 +1,22 @@
+p#notice= notice
+p
+  b Name:
+  = @plant.name
+p
+  b Lat name:
+  = @plant.lat_name
+p
+  b Description:
+  = @plant.description
+p
+  b Plant type:
+  = @plant.plant_type
+p
+  b Width:
+  = @plant.width
+p
+  b Height:
+  = @plant.height
+=' link_to 'Edit', edit_plant_path(@plant)
+' |
+= link_to 'Back', plants_path
