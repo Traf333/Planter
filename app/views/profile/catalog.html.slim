@@ -27,16 +27,16 @@ h1 Управление каталогом
                 th Прайс
                 th
               = f.fields_for :plant_prices, @plant_prices do |plant_price_form|
-                tr.plant-price style='display: none' if plant_price_form.object.id.nil?
+                tr.plant-price style="#{'display: none' if plant_price_form.object.id.nil?}"
                   = render 'plant_price', :f => plant_price_form
             a.btn.pull-right onclick="addNewPrice()"
         - current_user.member.member_prices.each do |member_price|
           - is_active_tab = @member_price.id == member_price.id
           - if is_active_tab
-            .tab-pane.active{:id => "price# @member_price.id}-tab"
+            .tab-pane.active id="price#{@member_price.id}-tab"
               = hidden_field_tag :member_price_id, @member_price.id
               div style="margin-bottom: 10px; text-align: right;"
-                = link_to 'Удалить прайс лист', profile_remove_member_price_path(:id => @member_price.id), method: :delete, data: { confirm: 'Вы уверены?' }, :class => 'btn btn-danger btn-small'                                                     |:
+                = link_to 'Удалить прайс лист', profile_remove_member_price_path(:id => @member_price.id), method: :delete, data: { confirm: 'Вы уверены?' }, :class => 'btn btn-danger btn-small'
               table#plants-price-list.list.table.table-striped.table-hover.table-bordered
                 tr
                   th Растение
@@ -48,6 +48,6 @@ h1 Управление каталогом
                   th Прайс
                   th
                 = f.fields_for :plant_prices, @plant_prices do |plant_price_form|
-                  tr.plant-price style='display: none' if plant_price_form.object.id.nil?
+                  tr.plant-price style="#{'display: none' if plant_price_form.object.id.nil?}"
                     = render 'plant_price', :f => plant_price_form
               a.btn.pull-right onclick="addNewPrice()"
