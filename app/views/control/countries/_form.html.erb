@@ -1,0 +1,32 @@
+<%= form_for([:control, @country], :html => {:class => "form-horizontal"}) do |f| %>
+
+    <% if @country.errors.any? %>
+        <div id="error_explanation" class="alert alert-error">
+          <ul>
+            <% @country.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <p id="notice"><%= notice %></p>
+
+    <fieldset>
+
+      <legend>Данные по стране</legend>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :name %></label>
+        <div class="controls">
+          <%= f.text_field :name, :placeholder => 'Россия' %>
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="form-actions">
+      <%= f.submit 'Сохранить', :class => 'btn btn-primary' %>
+      <%= link_to 'Отмена', control_countries_path, :class => 'btn' %>
+    </div>
+
+<% end %>

@@ -1,0 +1,28 @@
+<h1>Страны</h1>
+
+<div class="table-control">
+  <%= link_to 'Добавить страну', new_control_country_path, :class => 'btn btn-primary' %>
+</div>
+
+<table class="table table-striped table-hover">
+  <tr>
+    <th><%= sortable :id, '#' %></th>
+    <th><%= sortable :name, 'Название' %></th>
+    <th></th>
+  </tr>
+
+  <% @countries.each do |country| %>
+      <tr>
+        <td><strong><%= country.id %></strong></td>
+        <td><%= country.name %></td>
+        <td style="text-align: right;">
+          <%= link_to 'Добавить регион', new_control_region_path(:country_id => country.id), :class => 'btn btn-small' %>
+          <%= link_to 'Изменить', edit_control_country_path(country), :class => 'btn btn-small' %>
+          <%= link_to 'Удалить', control_country_path(country), method: :delete, data: {confirm: 'Вы уверены?'},
+                      :class => 'btn btn-danger btn-small' %>
+        </td>
+      </tr>
+  <% end %>
+</table>
+
+<%= will_paginate @countries, :renderer => BootstrapPagination::Rails %>

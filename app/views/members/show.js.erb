@@ -1,0 +1,28 @@
+$(function () {
+
+    var canvas = $('#map_canvas').get(0);
+    var map = new google.maps.Map(canvas, { zoom: 10, mapTypeId: google.maps.MapTypeId.ROADMAP });
+
+    var addresses = [];
+    <% @member.member_addresses.each do |address| %>
+    addresses.push({
+            lat: <%= address.latitude %>,
+            lon: <%= address.longitude %>
+        });
+    <% end %>
+
+    $.each(addresses, function(index, address) {
+
+        var pos = new google.maps.LatLng(address.lat, address.lon);
+        var marker = new google.maps.Marker({ map: map, position: pos });
+        console.log('1');
+    });
+
+    setTimeout(function () {
+        google.maps.event.trigger(canvas, 'resize');
+        //map.panTo(center);
+
+    }, 1000);
+
+    alert(1);
+});

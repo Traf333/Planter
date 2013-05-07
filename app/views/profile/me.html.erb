@@ -1,0 +1,122 @@
+<h1>Мой профиль</h1>
+
+<%= render 'shared/profile_menu' %>
+
+<%= form_for(@user, :url => { :action => 'update_me' }, :html => {:class => "form-horizontal"}) do |f| %>
+    <% if @user.errors.any? %>
+        <div id="error_explanation" class="alert alert-error">
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <fieldset>
+
+      <legend>Личные данные</legend>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :email %></label>
+
+        <div class="controls">
+          <strong>
+            <div style="margin: 5px; text-decoration: underline;">
+              <%= @user.email %>
+            </div>
+          </strong>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :name %></label>
+
+        <div class="controls">
+          <%= f.text_field :name, :placeholder => 'Иван' %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :last_name %></label>
+
+        <div class="controls">
+          <%= f.text_field :last_name, :placeholder => 'Ивановов' %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :surname %></label>
+
+        <div class="controls">
+          <%= f.text_field :surname, :placeholder => 'Иванович' %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :address %></label>
+
+        <div class="controls">
+          <%= f.text_field :address, :autocomplete => 'off' %>
+        </div>
+      </div>
+
+      <legend>Новый пароль</legend>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :password %></label>
+
+        <div class="controls">
+          <%= f.password_field :password, :autocomplete => 'off', :placeholder => 'новый пароль' %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :password_confirmation %></label>
+
+        <div class="controls">
+          <%= f.password_field :password_confirmation, :autocomplete => 'off', :placeholder => 'новый пароль еще раз' %>
+        </div>
+      </div>
+
+
+      <legend>Контактная информация</legend>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :phone %></label>
+
+        <div class="controls">
+          <%= f.text_field :phone, :placeholder => '+7 (910) 123 45 67' %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :skype %></label>
+
+        <div class="controls">
+          <%= f.text_field :skype %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :icq %></label>
+
+        <div class="controls">
+          <%= f.text_field :icq %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :site %></label>
+
+        <div class="controls">
+          <%= f.text_field :site %>
+        </div>
+      </div>
+
+    </fieldset>
+
+    <div class="form-actions">
+      <%= f.submit 'Сохранить', :class => 'btn btn-primary' %>
+    </div>
+<% end %>

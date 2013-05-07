@@ -1,0 +1,51 @@
+#categories {
+    width: 200px;
+}
+
+#images #images-container {
+
+    padding: 10px 0;
+}
+
+#images #images-container .photo-container {
+
+    display: inline;
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}
+
+#images #images-container .photo {
+
+    border: solid 2px #CCCCCC;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#images #images-container .photo:hover {
+
+    border: solid 2px #336699;
+}
+
+#images #images-container .full-photo {
+    display: none;
+    padding: 5px;
+    text-align: center;
+}
+
+#images #images-container .full-photo img {
+
+    padding: 10px 0;
+}
+
+#images #images-container .full-photo .btn {
+
+    margin-right: 5px;
+}
+
+#images #progress-dialog {
+
+    padding: 10px;
+    display: none;
+}

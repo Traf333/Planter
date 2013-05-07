@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: Ivan
+  last_name: Ivanov
+  surname: Ivanovich
+  phone: 002
+  address: Lubjanka
+  email: test@test.ru
+  site: www.google.com
+
+two:
+  name: MyString
+  last_name: MyString
+  surname: MyString
+  phone: MyString
+  address: MyString
+  email: MyString
+  site: MyString

@@ -1,0 +1,251 @@
+<style>
+
+    #plants {
+
+        margin-top: 40px;
+    }
+
+    #plants .plant-item {
+
+        margin-bottom: 20px;
+        border: dashed 1px #CCCCCC;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    #plants .plant-item .description {
+        font-style: italic;
+    }
+
+    #plants .plant-item .kinds {
+
+    }
+
+    #plants .plant-item .kinds .kind {
+
+    }
+
+    #plants .plant-item .kinds .kind .kind-images {
+
+        padding: 10px 0;
+    }
+
+    #plants .plant-item .kinds .kind .kind-images img {
+
+        max-width: 75px;
+        max-height: 75px;
+        border: solid 1px #CCCCCC;
+        margin: 3px;
+    }
+
+    #plants .plant-item .kinds .kind .kind-info {
+
+        width: 100%;
+    }
+
+    #plants .plant-item .kinds .kind .kind-info .param {
+
+        float: left;
+        width: 50%;
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    #plants .plant-item .kinds .kind .kind-info .param .name {
+
+        font-weight: bold;
+    }
+
+    #plants .plant-item .kinds .kind .sorts {
+
+        padding-left: 150px;
+    }
+
+    #plants .plant-item .kinds .kind .sorts .sort table td {
+
+        padding: 5px;
+    }
+
+    #plants .plant-item .kinds .kind .sorts .sort img {
+
+        border: solid 1px #CCCCCC;
+        border-radius: 3px;
+    }
+
+    #plants .plant-item .kinds .kind .sorts .sort table td:first-child {
+
+        width: 75px;
+        height: 75px;
+        text-align: center;
+    }
+
+    #plants .plant-item .kinds .kind .sorts .sort .sort-info {
+
+    }
+
+    #plants .plant-item .kinds .kind .sorts .sort .sort-info .param {
+
+        float: left;
+        width: 50%;
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    #plants .plant-item .kinds .kind .sorts .sort .sort-info .param .name {
+
+        font-weight: bold;
+        width: 50px;
+        text-align: right;
+    }
+
+</style>
+
+<%= content_for :search do %>
+
+    <form action='<%= plants_path %>' method="get">
+      <div class="well sidebar-nav" style="margin-top: 90px;">
+        <ul class="nav nav-list">
+          <li class="nav-header">Поиск</li>
+          <li>
+            <p>
+              <%= text_field_tag :search, params[:search], :placeholder => 'Название' %>
+            </p>
+          </li>
+          <li>
+            <p>
+              <span>Род:</span>
+              <%= select_tag :genu_id,
+                             options_from_collection_for_select(Genu.all, :id, :name, params[:genu_id]),
+                             :prompt => 'Все' %>
+            </p>
+          </li>
+          <li>
+            <%= submit_tag 'Поиск', :class => 'btn btn-primary', :name => nil %>
+            <%= button_tag 'Сбросить', :class => 'btn', :name => nil, :type => 'reset' %>
+          </li>
+        </ul>
+      </div>
+    </form>
+
+<% end %>
+
+<h1>Растения</h1>
+
+<div id="plants">
+
+  <% if @genus.empty? %>
+      <p>Поиск не дал результатов, попробуйте выбрать другие критерии поиска.</p>
+  <% end %>
+
+  <% @genus.each do |genu| %>
+      <div class="plant-item">
+
+        <h4><%= genu.title %></h4>
+
+        <div class="description">
+          <%= genu.description %>
+        </div>
+
+
+        <div class="kinds">
+
+          <ul>
+            <% genu.plants.only_parents.each do |kind| %>
+                <li>
+                  <div class="kind">
+
+                    <h5 style="background-color: #f2f2f2; padding: 5px; border-radius: 3px;">
+                      <%= link_to kind.title, plant_path(kind), :target => '_blank' %>
+                    </h5>
+
+                    <div class="description">
+                      <%= kind.description %>
+                    </div>
+
+                    <div class="kind-images">
+                      <% kind.images.each do |image| %>
+                          <a href='javascript: showPlantFullImage("<%= image.picture(:medium) %>")'>
+                            <%= image_tag (image.picture(:mini_thumb)) %>
+                          </a>
+                      <% end %>
+                    </div>
+
+                    <div class="kind-info">
+                      <div class="param">
+                        <span class="name">Высота:</span> <%= plant_value_or_na(kind.height) %>
+                      </div>
+                      <div class="param">
+                        <span class="name">Ширина:</span> <%= plant_value_or_na(kind.width) %>
+                      </div>
+                      <div class="param">
+                        <span class="name">Крона:</span> <%= plant_value_or_na(kind.krone) %>
+                      </div>
+                      <div class="param">
+                        <span class="name">Цветы:</span> <%= plant_value_or_na(kind.flowers) %>
+                      </div>
+                      <div class="param">
+                        <span class="name">Листья:</span> <%= plant_value_or_na(kind.leafs) %>
+                      </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <hr/>
+                    <div class="sorts">
+
+                      <ul>
+                        <% Plant.where(:plant_id => kind.id).each do |sort| %>
+                            <li>
+                              <div class="sort">
+
+                                <%= link_to sort.title, plant_path(sort), :target => '_blank' %>
+
+                                <table>
+                                  <tr>
+                                    <td>
+                                      <% sort_image = sort.images.first %>
+                                      <a href='javascript: showPlantFullImage("<%= sort_image.picture(:medium) %>")'>
+                                        <%= image_tag(sort_image.picture(:mini_thumb)) %>
+                                      </a>
+                                    </td>
+                                    <td>
+                                      <div class="sort-info">
+                                        <div class="param">
+                                          <span class="name">Высота:</span> <%= plant_value_or_na(sort.height) %>
+                                        </div>
+                                        <div class="param">
+                                          <span class="name">Ширина:</span> <%= plant_value_or_na(sort.width) %>
+                                        </div>
+                                        <div class="param">
+                                          <span class="name">Крона:</span> <%= plant_value_or_na(sort.krone) %>
+                                        </div>
+                                        <div class="param">
+                                          <span class="name">Цветы:</span> <%= plant_value_or_na(sort.flowers) %>
+                                        </div>
+                                        <div class="param">
+                                          <span class="name">Листья:</span> <%= plant_value_or_na(sort.leafs) %>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </table>
+
+                                <div style="clear: both;"></div>
+                                <hr/>
+                              </div>
+                            </li>
+                        <% end %>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+            <% end %>
+          </ul>
+
+        </div>
+
+      </div>
+
+  <% end %>
+
+  <%= will_paginate @genus, :renderer => BootstrapPagination::Rails %>
+
+</div>

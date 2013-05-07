@@ -1,0 +1,17 @@
+<h1>Категории растений</h1>
+
+<div class="table-control">
+  <%= link_to 'Добавить категорию', new_control_plant_category_path, :class => 'btn btn-primary' %>
+</div>
+
+<table id="plants-categories" class="table table-striped table-hover">
+  <tr>
+    <th><%= sortable :id, '#' %></th>
+    <th><%= sortable :name, 'Название' %></th>
+  </tr>
+  <% @plant_categories.each do |plant_category| %>
+      <% @plant_category = plant_category %>
+      <%= render 'control/plant_categories/category' %>
+  <% end %>
+</table>
+

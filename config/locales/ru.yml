@@ -1,0 +1,173 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ru:
+  activerecord:
+    attributes:
+      user:
+        name: "Имя"
+        last_name: "Фамилия"
+        surname: "Отчество"
+        address: "Адрес"
+        phone: "Телефон"
+        email: "E-mail"
+        site: "Сайт"
+        password: 'Пароль'
+        password_confirmation: 'Подтвердите пароль'
+        remember_me: 'Запомнить меня'
+        messages:
+          has_been_success_created: "Пользователь успешно создан."
+          has_been_success_updated: "Информация о пользователе успешно обновлена."
+      country:
+        name: "Название"
+        messages:
+          has_been_success_created: "Страна успешно добавлена."
+          has_been_success_updated: "Страна успешно обновлена."
+      region:
+        name: "Название"
+        country: "Страна"
+        messages:
+          has_been_success_created: "Регион успешно добавлен."
+          has_been_success_updated: "Регион успешно обновлен."
+      plant_feature:
+        name: "Название"
+        messages:
+          has_been_success_created: "Характеристика успешно добавлена."
+          has_been_success_updated: "Характеристика успешно обновлена."
+      plant_category:
+        name: "Название"
+        lat_name: "Латинское название"
+        description: "Описание"
+        plant_category: "Родитель"
+        messages:
+          has_been_success_created: "Категория успешно добавлена."
+          has_been_success_updated: "Категория успешно обновлена."
+      plant:
+        name: "Название"
+        lat_name: "Латинское название"
+        width: "Длина"
+        height: "Высота"
+        description: "Описание"
+        plant_category_id: "Категория"
+        plant_id: "Родитель"
+        plant_type: "Тип"
+        krone: "Крона"
+        leafs: "Листья"
+        flowers: "Цветы"
+        genu: 'Род'
+        synonyms: "Рус. синонимы"
+        lat_synonyms: "Лат. синонимы"
+        is_shown_in_catalog: "Показывать в каталоге?"
+        messages:
+          has_been_success_created: "Растение успешно добавлено."
+          has_been_success_updated: "Растение успешно обновлено."
+      genu:
+        name: "Название"
+        lat_name: "Латинское название"
+        description: "Описание"
+        plant_category_id: "Категория"
+        synonyms: "Рус. синонимы"
+        lat_synonyms: "Лат. синонимы"
+        messages:
+          has_been_success_created: "Род успешно добавлен."
+          has_been_success_updated: "Род успешно обновлен."
+      member:
+        name: "Название"
+        is_moderated: "Модерирован"
+        user_id: "Пользователь"
+        country_id: "Страна"
+        image_id: "Логотип"
+        member_tariff_id: "Тарифный план"
+        description: "Описание"
+        site: "Сайт"
+        phone: "Телефон"
+        email: "E-mail"
+        contacts: "Контакты"
+        messages:
+          has_been_success_created: "Участник успешно добавлен."
+          has_been_success_updated: "Участник успешно обновлен."
+      member_category:
+        name: "Название"
+        description: "Описание"
+        messages:
+          has_been_success_created: "Категория успешно добавлена."
+          has_been_success_updated: "Категория успешно обновлена."
+      member_address:
+        member_address_type_id: "Тип"
+        address: "Адрес"
+        note: "Примечание"
+        contacts: "Контакты"
+        description: "Описание"
+      member_price:
+        name: "Название"
+    errors:
+      messages:
+        invalid_email_format: "имеет не правельный формат."
+      models:
+        user:
+          attributes:
+            name:
+              blank: "не может быть пустым."
+            email:
+              blank: "не может быть пустым."
+              invalid: "неверный формат e-mail."
+              taken: "уже зарегистрирован."
+            password:
+              blank: "не может быть пустым."
+              confirmation: "должен совпадать."
+              too_short: "слишком короткий."
+        country:
+          attributes:
+            name:
+              blank: "не может быть пустым."
+              taken: "страны уже занято."
+        region:
+          attributes:
+            name:
+              blank: "не может быть пустым."
+              taken: "региона уже занято."
+        plant_feature:
+          attributes:
+            name:
+              blank: "не может быть пустым."
+              taken: "характеристики уже занято."
+        plant_category:
+          attributes:
+            name:
+              blank: "не может быть пустым."
+              taken: "категории уже занято."
+            lat_name:
+              blank: "не может быть пустым."
+              taken: "категории уже занято."
+        plant:
+          attributes:
+            name:
+              blank: "не может быть пустым."
+              taken: "растения уже занято."
+            lat_name:
+              blank: "не может быть пустым."
+              taken: "растения уже занято."
+        genu:
+          attributes:
+            name:
+              blank: "не может быть пустым."
+              taken: "растения уже занято."
+            lat_name:
+              blank: "не может быть пустым."
+              taken: "растения уже занято."
+            plant_category_id:
+              blank: 'не может быть не выбранной'
+        member:
+          attributes:
+            name:
+              blank: "не может быть пустым."
+              taken: "участника уже занято."
+        member_category:
+          attributes:
+            name:
+              blank: "не может быть пустым."
+              taken: "категории уже занято."
+
+  will_paginate:
+    previous_label: "Назад"
+    next_label: "Вперед"

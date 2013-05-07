@@ -1,0 +1,2 @@
+module PlantFeaturesHelper
+end

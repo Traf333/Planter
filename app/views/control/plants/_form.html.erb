@@ -1,0 +1,175 @@
+<%= javascript_include_tag 'control/plants' %>
+
+<%= form_for([:control, @plant], :html => {:class => "form-horizontal"}) do |f| %>
+
+    <% if @plant.errors.any? %>
+        <div id="error_explanation" class="alert alert-error">
+          <ul>
+            <% @plant.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <p id="notice"><%= notice %></p>
+    <%= f.hidden_field :id %>
+
+    <fieldset>
+
+      <legend>Данные по растению</legend>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :plant_category_id %></label>
+
+        <div class="controls">
+          <%= f.select :plant_category_id, categories_list, {}, :class => 'plant_category_id' %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :genu %></label>
+
+        <div class="controls">
+          <%= f.hidden_field :genu_id %>
+          <input id="genu"
+                 value='<%= "#{@plant.genu.name}" if @plant.genu.present? %>'
+                 placeholder="Введите название" type="text" autocomplete="off"/>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :plant_id %></label>
+
+        <div class="controls">
+          <%= f.hidden_field :plant_id %>
+          <input id="parent-plant"
+                 value='<%= "#{@plant.plant.name}" if @plant.plant.present? %>'
+                 placeholder="Введите название" type="text" autocomplete="off"/>
+        </div>
+      </div>
+
+      <legend></legend>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :name %></label>
+
+        <div class="controls">
+          <%= f.text_field :name %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :lat_name %></label>
+
+        <div class="controls">
+          <%= f.text_field :lat_name %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :is_shown_in_catalog %></label>
+
+        <div class="controls">
+          <%= f.check_box :is_shown_in_catalog %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :description %></label>
+
+        <div class="controls">
+          <%= f.text_area :description, :rows => 5 %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :width %></label>
+
+        <div class="controls">
+          <%= f.text_field :width, :placeholder => '3 м - 5 м' %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :height %></label>
+
+        <div class="controls">
+          <%= f.text_field :height, :placeholder => '3 м - 5 м' %>
+        </div>
+      </div>
+
+      <legend></legend>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :krone %></label>
+
+        <div class="controls">
+          <%= f.text_field :krone %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :leafs %></label>
+
+        <div class="controls">
+          <%= f.text_field :leafs %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :flowers %></label>
+
+        <div class="controls">
+          <%= f.text_field :flowers %>
+        </div>
+      </div>
+
+      <legend>Синонимы</legend>
+      <div class="control-group">
+        <label class="control-label"><%= f.label :synonyms %></label>
+
+        <div class="controls">
+          <%= f.text_field :synonyms %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :lat_synonyms %></label>
+
+        <div class="controls">
+          <%= f.text_field :lat_synonyms %>
+        </div>
+      </div>
+
+      <legend>Картинки</legend>
+
+      <div id="images">
+        <div id="controls">
+          <p class="help-block">
+            Выберите файл для загрузки:
+            <input id="plant-image-file" type="file" multiple=""/>
+
+          <div id="progress-dialog" class="modal fade">
+            <h3>Загрузка...</h3>
+
+            <div id="progress-bar" class="progress progress-striped active">
+              <div class="bar"></div>
+            </div>
+          </div>
+
+          </p>
+        </div>
+        <div id="images-container">
+
+        </div>
+      </div>
+
+    </fieldset>
+
+    <div class="form-actions">
+      <%= f.submit 'Сохранить', :class => 'btn btn-primary' %>
+      <%= link_to 'Отмена', control_plants_path, :class => 'btn' %>
+    </div>
+
+<% end %>

@@ -1,0 +1,175 @@
+<%= content_for :title, 'Участники' %>
+
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGWSI8xlBZIb9GX1p_IqbgNKQbqXNpfBg&sensor=false"></script>
+
+<style>
+
+    #members {
+
+        margin-top: 40px;
+    }
+
+    #members .member {
+
+        padding: 10px;
+        border: solid 1px #ddd;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        background-color: #fdfdfd;
+    }
+
+    #members .member:hover {
+        border: solid 1px #CCCCCC;
+    }
+
+    #members .member .info {
+
+        padding-left: 5px;
+    }
+
+    #members .member .description {
+        font-weight: bold;
+    }
+
+    #members .member .phone {
+
+        font-size: 16px;
+        line-height: 1.4em;
+        font-family: "trebuchet ms";
+        padding: 3px;
+    }
+
+    #members .member .site {
+
+        font-size: 16px;
+        line-height: 1.4em;
+    }
+
+    #members .member .logo {
+
+        width: 150px;
+        height: 150px;
+        float: right;
+        text-align: center;
+    }
+
+    #members .member .logo img {
+
+        border-radius: 5px;
+        vertical-align: middle;
+    }
+
+</style>
+
+<%= content_for :search do %>
+
+    <form action='<%= members_path %>' method="get">
+      <div class="well sidebar-nav" style="margin-top: 90px;">
+        <ul class="nav nav-list">
+          <li class="nav-header">Поиск</li>
+          <li>
+            <p>
+              <%= text_field_tag :search, params[:search], :placeholder => 'Поиск' %>
+            </p>
+          </li>
+          <li>
+            <p>
+              <%= select_tag :country_id,
+                             options_from_collection_for_select(Country.all, :id, :name, params[:country_id]),
+                             :prompt => 'Все',
+                             :onchange => 'loadRegions(this, "#region_id")' %>
+            </p>
+          </li>
+          <li>
+            <p>
+              <% regions = [] %>
+              <% regions = Region.where(:country_id => params[:country_id]) if params[:country_id] %>
+              <%= select_tag :region_id,
+                             options_from_collection_for_select(regions, :id, :name, params[:region_id]),
+                             :prompt => 'Все' %>
+            </p>
+          </li>
+          <li>
+            <%= submit_tag 'Поиск', :class => 'btn btn-primary', :name => nil %>
+            <%= button_tag 'Сбросить', :class => 'btn', :name => nil, :type => 'reset' %>
+          </li>
+        </ul>
+      </div>
+    </form>
+
+<% end %>
+
+<h1>Участники</h1>
+
+<div id="members">
+
+  <% if @members.empty? %>
+    <p>Поиск не дал результатов, попробуйте выбрать другие критерии поиска.</p>
+  <% end %>
+
+  <% @members.each do |member| %>
+
+      <div class="member">
+
+        <%= hidden_field_tag :id, member.id %>
+
+        <div style="float: left">
+          <h4>
+            <%= link_to member_title(member), member_path(member), :target => '_blank' %>
+          </h4>
+
+          <div class="info">
+            <div class="description">
+              <%= member.description %>
+            </div>
+            <div class="addresses">
+              <strong>Адреса:</strong>
+              <% member.member_addresses.each do |address| %>
+                  <%= "#{address.address};" %>
+              <% end %>
+            </div>
+            <div class="phone">
+              <%= member.phone %>
+            </div>
+            <div class="site">
+              <%= link_to member.site, "http://#{member.site}", :target => '_blank' %>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="logo">
+          <%= link_to member_path(member), :target => '_blank' do %>
+              <%= image_tag(member.image.picture(:thumb)) %>
+          <% end %>
+        </div>
+
+        <div style="clear: both"></div>
+
+        <div class="links">
+          <a href="javascript:" onclick='showOnMap(this)' class="btn btn-small">Развернуть</a>
+        </div>
+
+        <div id="details">
+          <div class="modal hide fade">
+            <div class="modal-body" style="max-height: 470px;">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <div id="details-content">
+
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a class="btn" data-dismiss="modal">Закрыть</a>
+              <%= link_to 'Открыть в номом окне', member_path(member), :target => '_blank', :class => 'btn btn-primary' %>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+  <% end %>
+
+  <%= will_paginate @members, :renderer => BootstrapPagination::Rails %>
+
+</div>

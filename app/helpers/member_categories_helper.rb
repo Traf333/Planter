@@ -1,0 +1,2 @@
+module MemberCategoriesHelper
+end

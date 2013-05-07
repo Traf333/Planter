@@ -1,0 +1,37 @@
+<p>
+  <strong><%= t 'activerecord.attributes.user.name' %>:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong><%= t 'activerecord.attributes.user.last_name' %>:</strong>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <strong><%= t 'activerecord.attributes.user.surname' %>:</strong>
+  <%= @user.surname %>
+</p>
+
+<p>
+  <strong><%= t 'activerecord.attributes.user.phone' %>:</strong>
+  <%= @user.phone %>
+</p>
+
+<p>
+  <strong><%= t 'activerecord.attributes.user.address' %>:</strong>
+  <%= @user.address %>
+</p>
+
+<p>
+  <strong><%= t 'activerecord.attributes.user.email' %>:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong><%= t 'activerecord.attributes.user.site' %>:</strong>
+  <%= @user.site %>
+</p>
+
+<%= link_to 'Изменить', edit_user_path(@user), :class => 'btn' %>
+<%= link_to 'Ок', users_path, :class => 'btn btn-success' %>

@@ -1,0 +1,21 @@
+<%= content_for :search do %>
+
+    <div class="well sidebar-nav">
+      <ul class="nav nav-list">
+        <li class="nav-header">Личный кабинет</li>
+        <li>
+          <%= link_to 'Мой профиль', profile_path %>
+        </li>
+        <% if current_user.is_seller %>
+            <li class="nav-header">Участник</li>
+            <li>
+              <%= link_to 'Моя компания', profile_member_path %>
+            </li>
+            <li>
+              <%= link_to 'Управление каталогом', profile_catalog_path %>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+
+<% end %>

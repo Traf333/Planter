@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @plant_category.name %>
+</p>
+
+<p>
+  <b>Lat name:</b>
+  <%= @plant_category.lat_name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @plant_category.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_plant_category_path(@plant_category) %> |
+<%= link_to 'Back', plant_categories_path %>

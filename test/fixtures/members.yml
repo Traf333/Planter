@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user: 
+  country: 
+  name: MyString
+  is_moderated: false
+  site: MyString
+  phone: MyString
+  email: MyString
+  description: MyString
+  image: 
+  contacts: MyString
+
+two:
+  user: 
+  country: 
+  name: MyString
+  is_moderated: false
+  site: MyString
+  phone: MyString
+  email: MyString
+  description: MyString
+  image: 
+  contacts: MyString

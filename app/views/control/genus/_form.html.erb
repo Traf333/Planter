@@ -1,0 +1,72 @@
+<%= form_for([:control, @genu], :html => {:class => "form-horizontal"}) do |f| %>
+    <% if @genu.errors.any? %>
+        <div id="error_explanation" class="alert alert-error">
+          <ul>
+            <% @genu.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <fieldset>
+
+      <legend></legend>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :plant_category_id %></label>
+
+        <div class="controls">
+          <%= f.select :plant_category_id, categories_list %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :name %></label>
+
+        <div class="controls">
+          <%= f.text_field :name, :placeholder => '' %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :lat_name %></label>
+
+        <div class="controls">
+          <%= f.text_field :lat_name, :placeholder => '' %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :description %></label>
+
+        <div class="controls">
+          <%= f.text_area :description, :rows => 5 %>
+        </div>
+      </div>
+
+      <legend>Синонимы</legend>
+      <div class="control-group">
+        <label class="control-label"><%= f.label :synonyms %></label>
+
+        <div class="controls">
+          <%= f.text_field :synonyms %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label"><%= f.label :lat_synonyms %></label>
+
+        <div class="controls">
+          <%= f.text_field :lat_synonyms %>
+        </div>
+      </div>
+
+    </fieldset>
+
+    <div class="form-actions">
+      <%= f.submit 'Сохранить', :class => 'btn btn-primary' %>
+      <%= link_to 'Отмена', control_genus_path, :class => 'btn' %>
+    </div>
+
+<% end %>

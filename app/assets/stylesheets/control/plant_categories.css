@@ -1,0 +1,20 @@
+.plant-categories-select {
+
+    width: 500px;
+}
+
+.plant-categories-select #selected-category {
+
+}
+
+.plant-categories-select .name {
+
+    cursor: pointer;
+    padding: 10px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.plant-categories-select .category-item:hover {
+
+    text-decoration: none !important;
+}

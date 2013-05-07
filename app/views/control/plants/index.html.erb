@@ -1,0 +1,71 @@
+<h1>Растения</h1>
+
+<div class="table-control">
+  <%= link_to 'Добавить растение', new_control_plant_path, :class => 'btn btn-primary' %>
+</div>
+
+<div>
+  <form action='<%= control_plants_path %>' method="get">
+
+    <table>
+      <tr>
+        <td></td>
+        <td>Род:</td>
+        <td>Категория:</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          <%= text_field_tag :name, params[:name], :placeholder => 'Название' %>
+        </td>
+        <td>
+          <%= select_tag :genu_id,
+                         options_from_collection_for_select(Genu.all, :id, :name, params[:genu_id]),
+                         :prompt => 'Все' %>
+        </td>
+        <td>
+          <%= select_tag :plant_category_id, options_for_select(categories_list, params[:plant_category_id]),
+                         :prompt => 'Все' %>
+        </td>
+        <td>
+          <%= submit_tag 'Поиск', :class => 'btn btn-primary', :name => nil, :style => 'margin-bottom: 10px;' %>
+        </td>
+      </tr>
+    </table>
+
+  </form>
+</div>
+
+<table class="table table-striped table-hover">
+  <tr>
+    <th><%= sortable :id, '#' %></th>
+    <th><%= sortable :plant_id, 'Тип' %></th>
+    <th><%= sortable :name, 'Название' %></th>
+    <th><%= sortable :lat_name, 'Лат.Название' %></th>
+    <th></th>
+  </tr>
+
+  <% @plants.each do |plant| %>
+      <% is_parent_present = plant.plant.present? %>
+      <tr>
+        <td><strong><%= plant.id %></strong></td>
+        <td><%= is_parent_present ? 'Сорт' : 'Вид' %></td>
+        <td><%= plant.name %></td>
+        <td><%= plant.lat_name %></td>
+        <td style="text-align: right;">
+          <% unless is_parent_present %>
+              <%= link_to 'Добавить сорт',
+                          new_control_plant_path(:plant_category_id => plant.plant_category_id,
+                                                 :genu_id => plant.genu_id,
+                                                 :plant_id => plant.id),
+                          :class => 'btn btn-small' %>
+          <% end %>
+          <%= link_to 'Изменить', edit_control_plant_path(plant), :class => 'btn btn-small' %>
+          <%= link_to 'Удалить', control_plant_path(plant), method: :delete, data: {confirm: 'Вы уверены?'},
+                      :class => 'btn btn-danger btn-small' %>
+        </td>
+      </tr>
+  <% end %>
+</table>
+
+<%= will_paginate @plants, :renderer => BootstrapPagination::Rails %>

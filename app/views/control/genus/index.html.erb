@@ -1,0 +1,34 @@
+<h1>Род</h1>
+
+<div class="table-control">
+  <%= link_to 'Добавить род', new_control_genu_path, :class => 'btn btn-primary' %>
+</div>
+
+<table class="table table-striped table-hover">
+  <tr>
+    <th><%= sortable :id, '#' %></th>
+    <th><%= sortable :name, 'Название' %></th>
+    <th><%= sortable :lat_name, 'Лат.Название' %></th>
+    <th><%= sortable :plant_category_id, 'Категория' %></th>
+    <th></th>
+  </tr>
+
+<% @genus.each do |genu| %>
+  <tr>
+    <td><strong><%= genu.id %></strong></td>
+    <td><%= genu.name %></td>
+    <td><%= genu.lat_name %></td>
+    <td><%= genu.plant_category.name %></td>
+    <td style="text-align: right;">
+      <%= link_to 'Добавить Вид',
+                  new_control_plant_path(:plant_category_id => genu.plant_category.id, :genu_id => genu.id),
+                  :class => 'btn btn-small' %>
+      <%= link_to 'Изменить', edit_control_genu_path(genu), :class => 'btn btn-small' %>
+      <%= link_to 'Удалить', control_genu_path(genu), method: :delete, data: { confirm: 'Вы уверены?' },
+                  :class => 'btn btn-danger btn-small'%>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<%= will_paginate @genus, :renderer => BootstrapPagination::Rails %>

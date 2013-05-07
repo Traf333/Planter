@@ -1,0 +1,70 @@
+<style>
+
+    #plant .plant-images {
+
+        padding: 10px 0;
+    }
+
+    #plant .plant-images img {
+
+        max-width: 150px;
+        max-height: 150px;
+        border: solid 1px #CCCCCC;
+        margin: 3px;
+    }
+
+    #plant .plant-info {
+
+        width: 100%;
+    }
+
+    #plant .plant-info .param {
+
+        float: left;
+        width: 50%;
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    #plant .plant-info .param .name {
+
+        font-weight: bold;
+    }
+
+</style>
+
+<div id="plant">
+  <h1><%= @plant.title %></h1>
+  <hr/>
+  <h5>Описание</h5>
+
+  <div class="plant-info">
+    <div class="param">
+      <span class="name">Высота:</span> <%= plant_value_or_na(@plant.height) %>
+    </div>
+    <div class="param">
+      <span class="name">Ширина:</span> <%= plant_value_or_na(@plant.width) %>
+    </div>
+    <div class="param">
+      <span class="name">Крона:</span> <%= plant_value_or_na(@plant.krone) %>
+    </div>
+    <div class="param">
+      <span class="name">Цветы:</span> <%= plant_value_or_na(@plant.flowers) %>
+    </div>
+    <div class="param">
+      <span class="name">Листья:</span> <%= plant_value_or_na(@plant.leafs) %>
+    </div>
+  </div>
+  <div style="clear: both;"></div>
+  <hr/>
+  <h5>Фотографии</h5>
+
+  <div class="plant-images">
+    <% @plant.images.each do |image| %>
+        <a href='javascript: showPlantFullImage("<%= image.picture(:medium) %>")'>
+          <%= image_tag (image.picture(:thumb)) %>
+        </a>
+    <% end %>
+  </div>
+
+</div>

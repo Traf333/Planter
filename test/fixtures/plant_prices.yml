@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  packing: MyString
+  size: MyString
+  count: MyString
+  price: 1.5
+  note: MyString
+
+two:
+  packing: MyString
+  size: MyString
+  count: MyString
+  price: 1.5
+  note: MyString

@@ -1,0 +1,12 @@
+$(function () {
+    $('#modals-container .modal').modal('hide');
+
+    var newPrice = $('<li></li>').append($('<a href="/profile/catalog?member_price_id=<%= @price.id %>"><%= @price.name %></a>'));
+    $('#prices').append(newPrice);
+
+    var newTab = $('<div id="price<%= @price.id %>-tab" class="tab-pane"></div>');
+    $('.tab-content').append(newTab);
+
+    $('.price-select').append($('<option value="<%= @price.id %>"><%= @price.name %></option>'));
+    $('.price-select').multiselect('refresh');
+});

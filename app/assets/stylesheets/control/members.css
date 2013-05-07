@@ -1,0 +1,25 @@
+#member #regions .list .region {
+
+    margin-bottom: 10px;
+}
+
+#member #addresses .list .address {
+
+    margin-bottom: 10px;
+    min-width: 350px;
+}
+
+#member #addresses .list .address .address-title {
+
+    width: 520px;
+}
+
+#member #categories {
+
+    min-width: 100%;
+}
+
+#member #categories .category {
+
+    margin-bottom: 10px;
+}

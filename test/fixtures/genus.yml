@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  lat_name: MyString
+  description: MyString
+  plant_category: 
+
+two:
+  name: MyString
+  lat_name: MyString
+  description: MyString
+  plant_category: 

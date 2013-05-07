@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @plant.name %>
+</p>
+
+<p>
+  <b>Lat name:</b>
+  <%= @plant.lat_name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @plant.description %>
+</p>
+
+<p>
+  <b>Plant type:</b>
+  <%= @plant.plant_type %>
+</p>
+
+<p>
+  <b>Width:</b>
+  <%= @plant.width %>
+</p>
+
+<p>
+  <b>Height:</b>
+  <%= @plant.height %>
+</p>
+
+
+<%= link_to 'Edit', edit_plant_path(@plant) %> |
+<%= link_to 'Back', plants_path %>
