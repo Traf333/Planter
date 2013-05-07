@@ -49,3 +49,133 @@
     padding: 10px;
     display: none;
 }
+
+
+#plant .plant-images {
+
+    padding: 10px 0;
+}
+
+#plant .plant-images img {
+
+    max-width: 150px;
+    max-height: 150px;
+    border: solid 1px #CCCCCC;
+    margin: 3px;
+}
+
+#plant .plant-info {
+
+    width: 100%;
+}
+
+#plant .plant-info .param {
+
+    float: left;
+    width: 50%;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+#plant .plant-info .param .name {
+
+    font-weight: bold;
+}
+
+#plants {
+
+    margin-top: 40px;
+}
+
+#plants .plant-item {
+
+    margin-bottom: 20px;
+    border: dashed 1px #CCCCCC;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#plants .plant-item .description {
+    font-style: italic;
+}
+
+#plants .plant-item .kinds {
+
+}
+
+#plants .plant-item .kinds .kind {
+
+}
+
+#plants .plant-item .kinds .kind .kind-images {
+
+    padding: 10px 0;
+}
+
+#plants .plant-item .kinds .kind .kind-images img {
+
+    max-width: 75px;
+    max-height: 75px;
+    border: solid 1px #CCCCCC;
+    margin: 3px;
+}
+
+#plants .plant-item .kinds .kind .kind-info {
+
+    width: 100%;
+}
+
+#plants .plant-item .kinds .kind .kind-info .param {
+
+    float: left;
+    width: 50%;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+#plants .plant-item .kinds .kind .kind-info .param .name {
+
+    font-weight: bold;
+}
+
+#plants .plant-item .kinds .kind .sorts {
+
+    padding-left: 150px;
+}
+
+#plants .plant-item .kinds .kind .sorts .sort table td {
+
+    padding: 5px;
+}
+
+#plants .plant-item .kinds .kind .sorts .sort img {
+
+    border: solid 1px #CCCCCC;
+    border-radius: 3px;
+}
+
+#plants .plant-item .kinds .kind .sorts .sort table td:first-child {
+
+    width: 75px;
+    height: 75px;
+    text-align: center;
+}
+
+#plants .plant-item .kinds .kind .sorts .sort .sort-info {
+
+}
+
+#plants .plant-item .kinds .kind .sorts .sort .sort-info .param {
+
+    float: left;
+    width: 50%;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+#plants .plant-item .kinds .kind .sorts .sort .sort-info .param .name {
+
+    font-weight: bold;
+    width: 50px;
+    text-align: right;
+}

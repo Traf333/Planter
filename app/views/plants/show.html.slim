@@ -1,0 +1,28 @@
+
+#plant
+  h1= @plant.title
+  hr
+  h5 Описание
+  .plant-info
+    .param
+      span.name Высота:
+      = plant_value_or_na(@plant.height)
+    .param
+      span.name Ширина:
+      = plant_value_or_na(@plant.width)
+    .param
+      span.name Крона:
+      = plant_value_or_na(@plant.krone)
+    .param
+      span.name Цветы:
+      = plant_value_or_na(@plant.flowers)
+    .param
+      span.name Листья:
+      = plant_value_or_na(@plant.leafs)
+  div style="clear: both;"
+  hr
+  h5 Фотографии
+  .plant-images
+    - @plant.images.each do |image|
+      a href="javascript: showPlantFullImage('#{image.picture(:medium)}')"
+        = image_tag (image.picture(:thumb))

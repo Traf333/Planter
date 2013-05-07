@@ -1,0 +1,85 @@
+= content_for :title, @member.name
+= javascript_include_tag :member
+#member
+  div
+    .logo
+      = image_tag(@member.image.picture(:thumb))
+    h1= @member.name
+    strong= @member.country.name
+    div style="clear: both;"
+  hr
+  h4 О нас
+  dl.info.dl-horizontal
+    dt Категории:
+    dd
+      = categories_string(@member)
+    dt Описание:
+    dd
+      = @member.description
+    dt Регионы:
+    dd
+      - @member.regions.each do |region|
+        = region.name
+        | (
+        b= region.country.name
+        | )
+        br
+  hr
+  h4 Контакты
+  dl.info.dl-horizontal
+    dt Телефон:
+    dd
+      span.phone= @member.phone
+    dt Сайт:
+    dd
+      = link_to @member.site, "http://#{@member.site}", :target => '_blank'
+    dt E-mail:
+    dd
+      = link_to @member.email, "mailto:#{@member.email}"
+    dt Контакты:
+    dd
+      = @member.contacts
+  hr
+  h4 Наши адреса
+  #addresses
+    script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGWSI8xlBZIb9GX1p_IqbgNKQbqXNpfBg&sensor=false" type="text/javascript"
+    #map_canvas
+    - @member.member_addresses.each_with_index do |address, index|
+      .address
+        hr
+        div
+          p
+            a.show-on-map-link href="javascript:"
+              = index + 1
+              | . #{address.member_address_type.name}
+              | (#{@member.name})
+          p
+            strong Адрес:
+            = address.address
+          - unless address.contacts.blank?
+            p
+              strong Контакты:
+              = address.contacts
+          - unless address.note.blank?
+            p
+              strong Примечание:
+              = address.note
+        = hidden_field_tag :latitude, address.latitude
+        = hidden_field_tag :longitude, address.longitude
+        .map-bubble-wrapper
+          .map-bubble
+            strong
+              = address.member_address_type.name
+              | (#{@member.name})
+            hr
+            p
+              strong Адрес:
+              = address.address
+            - unless address.contacts.blank?
+              p
+                strong Контакты:
+                = address.contacts
+            - unless address.note.blank?
+              p
+                strong Примечание:
+                = address.note

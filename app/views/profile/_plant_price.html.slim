@@ -14,13 +14,13 @@ td.note
 td.prices
   select.price-select.multiselect multiple="multiple"
     - current_user.member.member_prices.each do |member_price|
-      option value=member_price.id selected="#{true  if member_price.plant_prices.where(:id => @plant_price.id).count > 0}"
-      = member_price.name
+      option value="#{member_price.id}" selected="#{'true' if member_price.plant_prices.where(:id => @plant_price.id).count > 0}"
+        =member_price.name
 td.remove-btn
   a.btn.btn-small onclick="addNewPrice(this);"
   a.btn.btn-danger.btn-small onclick="removePrice(this);"
   a onclick="addImagesForPlantPrice(this, #{@plant_price.id})"
-  input.plant_price_id type="hidden" value=@plant_price.id
+  input.plant_price_id type="hidden" value="#{@plant_price.id}"
   #plant-price-info.modal.hide.fade
     .modal-body
       table
@@ -34,7 +34,7 @@ td.remove-btn
         tr
           td
             = f.hidden_field :plant_id, :class => 'plant_id'
-            = text_field_tag :autocomplete => "off", :placeholder => "Введите название", :style => "z-index: 1051;", :class => "plant input-small typeahead", :value =>f.object.plant.name if f.object.plant.present?
+            = text_field_tag :class => "plant input-small typeahead", :autocomplete => "off", :placeholder => "Введите название", :style => "z-index: 1051;", :value => "#{f.object.plant.name if f.object.plant.present?}" 
           td
             = f.text_field :packing, :placeholder => 'C3', :class => 'packing input-small'
           td

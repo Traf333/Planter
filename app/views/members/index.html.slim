@@ -1,0 +1,57 @@
+= content_for :title, 'Участники'
+script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGWSI8xlBZIb9GX1p_IqbgNKQbqXNpfBg&sensor=false" type="text/javascript"
+= content_for :search do
+  form action=members_path method="get"
+    .well.sidebar-nav style="margin-top: 90px;"
+      ul.nav.nav-list
+        li.nav-header Поиск
+        li
+          p
+            = text_field_tag :search, params[:search], :placeholder => 'Поиск'
+        li
+          p
+            = select_tag :country_id, options_from_collection_for_select(Country.all, :id, :name, params[:country_id]), :prompt => 'Все', :onchange => 'loadRegions(this, "#region_id")'
+        li
+          p
+            - regions = []
+            - regions = Region.where(:country_id => params[:country_id]) if params[:country_id]
+            = select_tag :region_id, options_from_collection_for_select(regions, :id, :name, params[:region_id]), :prompt => 'Все'
+        li
+          = submit_tag 'Поиск', :class => 'btn btn-primary', :name => nil
+          = button_tag 'Сбросить', :class => 'btn', :name => nil, :type => 'reset'
+h1 Участники
+#members
+  - if @members.empty?
+    p Поиск не дал результатов, попробуйте выбрать другие критерии поиска.
+  - @members.each do |member|
+    .member
+      = hidden_field_tag :id, member.id
+      div style="float: left"
+        h4
+          = link_to member_title(member), member_path(member), :target => '_blank'
+        .info
+          .description
+            = member.description
+          .addresses
+            strong Адреса:
+            - member.member_addresses.each do |address|
+              = "#{address.address};"
+          .phone
+            = member.phone
+          .site
+            = link_to member.site, "http://#{member.site}", :target => '_blank'
+      .logo
+        = link_to member_path(member), :target => '_blank' do
+          = image_tag(member.image.picture(:thumb))
+      div style="clear: both"
+      .links
+        a.btn.btn-small href="javascript:" onclick="showOnMap(this)" Развернуть
+      #details
+        .modal.hide.fade
+          .modal-body style="max-height: 470px;"
+            button.close aria-hidden="true" data-dismiss="modal" type="button" ×
+            #details-content
+          .modal-footer
+            a.btn data-dismiss="modal" Закрыть
+            = link_to 'Открыть в номом окне', member_path(member), :target => '_blank', :class => 'btn btn-primary'
+  = will_paginate @members, :renderer => BootstrapPagination::Rails

@@ -1,0 +1,88 @@
+= content_for :search do
+  form action=(plants_path) method="get"
+    .well.sidebar-nav style="margin-top: 90px;"
+      ul.nav.nav-list
+        li.nav-header Поиск
+        li
+          p
+            = text_field_tag :search, params[:search], :placeholder => 'Название'
+        li
+          p
+            span Род:
+            br
+            = select_tag :genu_id, options_from_collection_for_select(Genu.all, :id, :name, params[:genu_id]), :prompt => 'Все'
+        li
+          = submit_tag 'Поиск', :class => 'btn btn-primary', :name => nil
+          = button_tag 'Сбросить', :class => 'btn', :name => nil, :type => 'reset'
+h1 Растения
+#plants
+  - if @genus.empty?
+    p Поиск не дал результатов, попробуйте выбрать другие критерии поиска.
+  - @genus.each do |genu|
+    .plant-item
+      h4= genu.title
+      .description
+        = genu.description
+      .kinds
+        ul
+          - genu.plants.only_parents.each do |kind|
+            li
+              .kind
+                h5 style="background-color: #f2f2f2; padding: 5px; border-radius: 3px;"
+                  = link_to kind.title, plant_path(kind), :target => '_blank'
+                .description
+                  = kind.description
+                .kind-images
+                  - kind.images.each do |image|
+                    a href="javascript: showPlantFullImage('#{image.picture(:medium)}')"
+                      = image_tag (image.picture(:mini_thumb))
+                .kind-info
+                  .param
+                    span.name Высота:
+                    = plant_value_or_na(kind.height)
+                  .param
+                    span.name Ширина:
+                    = plant_value_or_na(kind.width)
+                  .param
+                    span.name Крона:
+                    = plant_value_or_na(kind.krone)
+                  .param
+                    span.name Цветы:
+                    = plant_value_or_na(kind.flowers)
+                  .param
+                    span.name Листья:
+                    = plant_value_or_na(kind.leafs)
+                div style="clear: both;"
+                hr
+                .sorts
+                  ul
+                    - Plant.where(:plant_id => kind.id).each do |sort|
+                      li
+                        .sort
+                          = link_to sort.title, plant_path(sort), :target => '_blank'
+                          table
+                            tr
+                              td
+                                - sort_image = sort.images.first
+                                a href="javascript: showPlantFullImage('#{sort_image.picture(:medium)}')"
+                                  = image_tag(sort_image.picture(:mini_thumb))
+                              td
+                                .sort-info
+                                  .param
+                                    span.name Высота:
+                                    = plant_value_or_na(sort.height)
+                                  .param
+                                    span.name Ширина:
+                                    = plant_value_or_na(sort.width)
+                                  .param
+                                    span.name Крона:
+                                    = plant_value_or_na(sort.krone)
+                                  .param
+                                    span.name Цветы:
+                                    = plant_value_or_na(sort.flowers)
+                                  .param
+                                    span.name Листья:
+                                    = plant_value_or_na(sort.leafs)
+                          div style="clear: both;"
+                          hr
+  = will_paginate @genus, :renderer => BootstrapPagination::Rails

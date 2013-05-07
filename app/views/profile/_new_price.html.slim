@@ -1,0 +1,18 @@
+.modal.hide.fade
+  = form_for(@price, :url => {:action => "save_price"}, :remote => true, :html => {:class => "form-horizontal", :style => 'margin: 0'}) do |f|
+    .modal-header
+      button.close aria-hidden="true" data-dismiss="modal" type="button" ×
+      h3 Прайс
+    .modal-body
+      - if @price.errors.any?
+        .alert.alert-block.alert-error
+          ul
+            - @price.errors.full_messages.each do |msg|
+              li
+                = msg
+      div class="control-group #{'error' if @price.errors[:name].present?}"
+        label.control-label for="name"
+        .controls
+          = f.text_field :name, :placeholder => 'Название прайса'
+    .modal-footer
+      = f.submit :class => "btn btn-primary", :value => "Сохнанить"
