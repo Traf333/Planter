@@ -31687,3 +31687,1975 @@ Processing by Control::RegionsController#index as JSON
   Parameters: {"country_id"=>"1"}
   [1m[35mRegion Load (0.5ms)[0m  SELECT "regions".* FROM "regions" WHERE "regions"."country_id" = 1 ORDER BY created_at desc LIMIT 30 OFFSET 0
 Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Processing by ProfileController#me as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered shared/_profile_menu.html.slim (2.0ms)
+  Rendered profile/me.html.slim within layouts/application (7.3ms)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/control.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /control.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/catalog.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /catalog.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/control/control_panel.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /control/control_panel.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/countries.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /control/countries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/genus.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /control/genus.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/images.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /control/images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/member_categories.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /control/member_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/plant_categories.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /control/plant_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/members.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /control/members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/plants.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /control/plants.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/plant_features.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /control/plant_features.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/regions.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /control/regions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/users.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /control/users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prettify.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /prettify.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/profile.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /profile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/root.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /root.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registrations.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /registrations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /select2.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /twitter/bootstrap.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-multiselect.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /bootstrap-multiselect.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prettify.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /prettify.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plants.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /plants.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/regions.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /regions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/address_dialog.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /address_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/delete_dialog.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /delete_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /application.js - 304 Not Modified (48ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-05-28 14:55:44 +1100
+Served asset /favicon.ico - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.ico"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/igor/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/members" for 127.0.0.1 at 2013-05-28 14:55:45 +1100
+Processing by MembersController#index as HTML
+  [1m[35mCountry Load (0.3ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "members" WHERE "members"."is_moderated" = 't'[0m
+  [1m[35mMember Load (0.1ms)[0m  SELECT "members".* FROM "members" WHERE "members"."is_moderated" = 't' LIMIT 30 OFFSET 0
+  [1m[36mMemberCategory Load (0.1ms)[0m  [1mSELECT "member_categories".* FROM "member_categories" INNER JOIN "member_categories_members" ON "member_categories"."id" = "member_categories_members"."member_category_id" WHERE "member_categories_members"."member_id" = 1[0m
+  [1m[35mMemberAddress Load (0.1ms)[0m  SELECT "member_addresses".* FROM "member_addresses" WHERE "member_addresses"."member_id" = 1
+  Rendered members/index.html.slim within layouts/application (8.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:45 +1100
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:45 +1100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/control.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:45 +1100
+Served asset /control.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:45 +1100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:45 +1100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/catalog.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /catalog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/control_panel.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /control/control_panel.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/countries.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /control/countries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/genus.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /control/genus.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/images.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /control/images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/member_categories.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /control/member_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/members.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /control/members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/plant_categories.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /control/plant_categories.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/control/plant_features.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /control/plant_features.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/plants.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /control/plants.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/regions.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /control/regions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/users.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /control/users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prettify.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /prettify.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/profile.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /profile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registrations.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /registrations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /select2.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/root.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /root.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /twitter/bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-multiselect.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /bootstrap-multiselect.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prettify.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /prettify.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plants.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /plants.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/regions.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /regions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/address_dialog.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /address_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/delete_dialog.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /delete_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-05-28 14:55:46 +1100
+Served asset /favicon.ico - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.ico"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/igor/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/plants" for 127.0.0.1 at 2013-05-28 14:55:47 +1100
+Processing by PlantsController#index as HTML
+  [1m[35mGenu Load (2.4ms)[0m  SELECT "genus".* FROM "genus" 
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "genus" [0m
+  [1m[35mGenu Load (0.2ms)[0m  SELECT "genus".* FROM "genus" LIMIT 30 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "genus" [0m
+  [1m[35mPlant Load (0.2ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 1 AND "plants"."plant_id" IS NULL
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."owner_id" = 1[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."plant_id" = 1
+  [1m[36mPlant Load (0.2ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 2 AND "plants"."plant_id" IS NULL[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 3 AND "plants"."plant_id" IS NULL
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 4 AND "plants"."plant_id" IS NULL[0m
+  [1m[35mPlant Load (0.2ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 5 AND "plants"."plant_id" IS NULL
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 6 AND "plants"."plant_id" IS NULL[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 7 AND "plants"."plant_id" IS NULL
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 8 AND "plants"."plant_id" IS NULL[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 9 AND "plants"."plant_id" IS NULL
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 10 AND "plants"."plant_id" IS NULL[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 11 AND "plants"."plant_id" IS NULL
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 12 AND "plants"."plant_id" IS NULL[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 13 AND "plants"."plant_id" IS NULL
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 14 AND "plants"."plant_id" IS NULL[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 15 AND "plants"."plant_id" IS NULL
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 16 AND "plants"."plant_id" IS NULL[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 17 AND "plants"."plant_id" IS NULL
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 19 AND "plants"."plant_id" IS NULL[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 20 AND "plants"."plant_id" IS NULL
+  [1m[36mPlant Load (0.2ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 21 AND "plants"."plant_id" IS NULL[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 22 AND "plants"."plant_id" IS NULL
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 23 AND "plants"."plant_id" IS NULL[0m
+  [1m[35mPlant Load (0.2ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 24 AND "plants"."plant_id" IS NULL
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 25 AND "plants"."plant_id" IS NULL[0m
+  [1m[35mPlant Load (0.2ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 26 AND "plants"."plant_id" IS NULL
+  [1m[36mPlant Load (0.2ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 27 AND "plants"."plant_id" IS NULL[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 28 AND "plants"."plant_id" IS NULL
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 29 AND "plants"."plant_id" IS NULL[0m
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 30 AND "plants"."plant_id" IS NULL
+  [1m[36mPlant Load (0.1ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."genu_id" = 31 AND "plants"."plant_id" IS NULL[0m
+  Rendered plants/index.html.slim within layouts/application (60.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 128ms (Views: 119.9ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/control.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /control.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/catalog.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /catalog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/control/control_panel.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /control/control_panel.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/countries.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /control/countries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/genus.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /control/genus.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/images.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /control/images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/member_categories.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /control/member_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/members.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /control/members.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/control/plant_categories.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /control/plant_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/plant_features.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /control/plant_features.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/plants.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /control/plants.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/regions.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /control/regions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/users.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /control/users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prettify.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /prettify.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/profile.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /profile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registrations.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /registrations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/root.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /root.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /select2.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /twitter/bootstrap.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-multiselect.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /bootstrap-multiselect.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prettify.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /prettify.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plants.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /plants.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/regions.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /regions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/address_dialog.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /address_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/delete_dialog.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /delete_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-05-28 14:55:48 +1100
+Served asset /favicon.ico - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.ico"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/igor/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2013-05-28 14:55:55 +1100
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.3ms)[0m  [1mSELECT "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered plants/show.html.slim within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `krone' for #<Plant:0x000000065fe7f8>):
+    12:       = plant_value_or_na(@plant.width)
+    13:     .param
+    14:       span.name Крона:
+    15:       = plant_value_or_na(@plant.krone)
+    16:     .param
+    17:       span.name Цветы:
+    18:       = plant_value_or_na(@plant.flowers)
+  app/views/plants/show.html.slim:15:in `_app_views_plants_show_html_slim__77608049310349768_53493320'
+
+
+  Rendered /home/igor/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /home/igor/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/igor/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.4ms)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlant Load (0.1ms)[0m  SELECT "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."owner_id" = 1[0m
+  Rendered plants/show.html.slim within layouts/application (4.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /control.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/catalog.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /catalog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/control_panel.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /control/control_panel.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/countries.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /control/countries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/genus.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /control/genus.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/images.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /control/images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/member_categories.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /control/member_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/members.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /control/members.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/plant_categories.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /control/plant_categories.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/control/plant_features.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /control/plant_features.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/plants.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /control/plants.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/regions.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /control/regions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/users.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /control/users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prettify.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /prettify.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/profile.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /profile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registrations.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /registrations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/root.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /root.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /select2.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /twitter/bootstrap.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-multiselect.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /bootstrap-multiselect.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prettify.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /prettify.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plants.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /plants.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/regions.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /regions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/address_dialog.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /address_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/delete_dialog.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /delete_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-05-28 14:58:45 +1100
+Served asset /favicon.ico - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.ico"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/igor/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/members" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Processing by MembersController#index as HTML
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "members" WHERE "members"."is_moderated" = 't'
+  [1m[36mMember Load (0.1ms)[0m  [1mSELECT "members".* FROM "members" WHERE "members"."is_moderated" = 't' LIMIT 30 OFFSET 0[0m
+  [1m[35mMemberCategory Load (0.1ms)[0m  SELECT "member_categories".* FROM "member_categories" INNER JOIN "member_categories_members" ON "member_categories"."id" = "member_categories_members"."member_category_id" WHERE "member_categories_members"."member_id" = 1
+  [1m[36mMemberAddress Load (0.1ms)[0m  [1mSELECT "member_addresses".* FROM "member_addresses" WHERE "member_addresses"."member_id" = 1[0m
+  Rendered members/index.html.slim within layouts/application (8.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 74ms (Views: 72.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/control.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /control.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/control/countries.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /control/countries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/catalog.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /catalog.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/control/control_panel.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /control/control_panel.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/genus.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /control/genus.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/images.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /control/images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/member_categories.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /control/member_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/members.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /control/members.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/control/plant_categories.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /control/plant_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/plant_features.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /control/plant_features.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/plants.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /control/plants.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/regions.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /control/regions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/users.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /control/users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prettify.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /prettify.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/profile.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /profile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registrations.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /registrations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/root.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /root.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /select2.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:53 +1100
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:54 +1100
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:54 +1100
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:54 +1100
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:54 +1100
+Served asset /twitter/bootstrap.js - 304 Not Modified (52ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:54 +1100
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-multiselect.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:54 +1100
+Served asset /bootstrap-multiselect.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prettify.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:54 +1100
+Served asset /prettify.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:54 +1100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plants.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:54 +1100
+Served asset /plants.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:54 +1100
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/regions.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:54 +1100
+Served asset /regions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/address_dialog.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:54 +1100
+Served asset /address_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/delete_dialog.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:54 +1100
+Served asset /delete_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-28 14:58:54 +1100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-05-28 14:58:54 +1100
+Served asset /favicon.ico - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.ico"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/igor/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/members/1" for 127.0.0.1 at 2013-05-28 14:58:56 +1100
+Processing by MembersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMember Load (0.1ms)[0m  [1mSELECT "members".* FROM "members" WHERE "members"."is_moderated" = 't' AND "members"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."owner_id" = 1 LIMIT 1
+  Rendered members/show.html.slim within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `picture' for nil:NilClass):
+    3: #member
+    4:   div
+    5:     .logo
+    6:       = image_tag(@member.image.picture(:thumb))
+    7:     h1= @member.name
+    8:     strong= @member.country.name
+    9:     div style="clear: both;"
+  app/views/members/show.html.slim:6:in `_app_views_members_show_html_slim__3346423626703185589_53614320'
+
+
+  Rendered /home/igor/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/igor/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/igor/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.2ms)
+
+
+Started GET "/members/1" for 127.0.0.1 at 2013-05-28 15:00:02 +1100
+Processing by MembersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMember Load (0.3ms)[0m  [1mSELECT "members".* FROM "members" WHERE "members"."is_moderated" = 't' AND "members"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."owner_id" = 1 LIMIT 1
+  [1m[36mCountry Load (0.1ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."id" = 1 LIMIT 1[0m
+  [1m[35mMemberCategory Load (0.1ms)[0m  SELECT "member_categories".* FROM "member_categories" INNER JOIN "member_categories_members" ON "member_categories"."id" = "member_categories_members"."member_category_id" WHERE "member_categories_members"."member_id" = 1
+  [1m[36mRegion Load (0.1ms)[0m  [1mSELECT "regions".* FROM "regions" INNER JOIN "members_regions" ON "regions"."id" = "members_regions"."region_id" WHERE "members_regions"."member_id" = 1[0m
+  [1m[35mMemberAddress Load (0.1ms)[0m  SELECT "member_addresses".* FROM "member_addresses" WHERE "member_addresses"."member_id" = 1
+  Rendered members/show.html.slim within layouts/application (10.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 33ms (Views: 28.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /control.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/catalog.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /catalog.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/control/control_panel.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /control/control_panel.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/countries.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /control/countries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/genus.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /control/genus.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/images.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /control/images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/member_categories.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /control/member_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/members.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /control/members.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/control/plant_categories.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /control/plant_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/plant_features.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /control/plant_features.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/plants.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /control/plants.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/regions.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /control/regions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/users.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /control/users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prettify.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /prettify.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/profile.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /profile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registrations.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /registrations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/root.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /root.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /select2.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /twitter/bootstrap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-multiselect.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /bootstrap-multiselect.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prettify.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /prettify.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plants.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /plants.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/regions.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /regions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/address_dialog.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /address_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/delete_dialog.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /delete_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/member.js?body=1" for 127.0.0.1 at 2013-05-28 15:00:03 +1100
+Served asset /member.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-05-28 15:00:04 +1100
+Served asset /favicon.ico - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.ico"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/igor/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2013-05-28 15:02:10 +1100
+Processing by ProfileController#me as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered shared/_profile_menu.html.slim (0.7ms)
+  Rendered profile/me.html.slim within layouts/application (5.4ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:10 +1100
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/control.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:10 +1100
+Served asset /control.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:10 +1100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/catalog.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:10 +1100
+Served asset /catalog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:10 +1100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:10 +1100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/control_panel.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:10 +1100
+Served asset /control/control_panel.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/countries.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:10 +1100
+Served asset /control/countries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/genus.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:10 +1100
+Served asset /control/genus.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/images.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:10 +1100
+Served asset /control/images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/member_categories.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:10 +1100
+Served asset /control/member_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/members.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:10 +1100
+Served asset /control/members.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/control/plant_categories.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:10 +1100
+Served asset /control/plant_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/plants.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:10 +1100
+Served asset /control/plants.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/control/plant_features.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:10 +1100
+Served asset /control/plant_features.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/regions.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:10 +1100
+Served asset /control/regions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/users.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:10 +1100
+Served asset /control/users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prettify.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:10 +1100
+Served asset /prettify.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/profile.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:10 +1100
+Served asset /profile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registrations.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:10 +1100
+Served asset /registrations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/root.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /root.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /select2.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /twitter/bootstrap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-multiselect.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /bootstrap-multiselect.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prettify.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /prettify.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plants.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /plants.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/regions.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /regions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/address_dialog.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /address_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/delete_dialog.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /delete_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-05-28 15:02:11 +1100
+Served asset /favicon.ico - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.ico"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/igor/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started PUT "/profile/update_me" for 127.0.0.1 at 2013-05-28 15:02:15 +1100
+Processing by ProfileController#update_me as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"700saEeq3rW1TZyyrRpV5JyN8gQ6OKeQROGWtw3L5aQ=", "user"=>{"name"=>"Игорь", "last_name"=>"Тро", "surname"=>"Але", "address"=>"Тихоокеанская 201 61", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone"=>"79141961578", "skype"=>"trofimov_igor1", "icq"=>"", "site"=>"www.plushki.com"}, "commit"=>"Сохранить"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/profile
+Completed 302 Found in 10ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Processing by ProfileController#me as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered shared/_profile_menu.html.slim (0.6ms)
+  Rendered profile/me.html.slim within layouts/application (4.9ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/catalog.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /catalog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/control.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /control.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/control/control_panel.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /control/control_panel.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/countries.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /control/countries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/genus.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /control/genus.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/images.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /control/images.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/member_categories.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /control/member_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/members.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /control/members.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/control/plant_categories.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /control/plant_categories.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/control/plant_features.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /control/plant_features.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/plants.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /control/plants.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/regions.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /control/regions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/control/users.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /control/users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prettify.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /prettify.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/profile.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /profile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registrations.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /registrations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/root.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /root.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/select2.css?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /select2.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /jquery.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /twitter/bootstrap.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-multiselect.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /bootstrap-multiselect.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prettify.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /prettify.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/members.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /members.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plants.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /plants.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /images.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/regions.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /regions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/address_dialog.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /address_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/delete_dialog.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /delete_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-28 15:02:16 +1100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-05-28 15:02:17 +1100
+Served asset /favicon.ico - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.ico"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/igor/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/profile/edit" for 127.0.0.1 at 2013-05-28 15:02:28 +1100
+
+ActionController::RoutingError (No route matches [GET] "/profile/edit"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/igor/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/igor/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)

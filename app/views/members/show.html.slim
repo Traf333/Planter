@@ -3,7 +3,7 @@
 #member
   div
     .logo
-      = image_tag(@member.image.picture(:thumb))
+      = image_tag(@member.image.picture(:thumb)) if @member.image.present?
     h1= @member.name
     strong= @member.country.name
     div style="clear: both;"
