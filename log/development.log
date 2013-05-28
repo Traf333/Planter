@@ -15587,3 +15587,566 @@ ActionController::RoutingError (No route matches [GET] "/assets/favicon.ico"):
 
 
   Rendered /home/igor/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130206080807)
+Migrating to AddDeviseToUsers (20130207045441)
+Migrating to AddContactsToUser (20130208083729)
+Migrating to AddRoleIdToUser (20130208130621)
+Migrating to CreateRoles (20130208130659)
+Migrating to AddDefaultValueForUserRole (20130208145646)
+Migrating to CreateCountries (20130208162036)
+Migrating to CreateRegions (20130212074226)
+Migrating to CreatePlantFeatures (20130212110630)
+Migrating to CreatePlantCategories (20130212122216)
+Migrating to AddedParentToPlantCategory (20130212130309)
+Migrating to CreatePlants (20130218183601)
+Migrating to AddCategoryIdToPlant (20130219043924)
+Migrating to AddParentIdToPlant (20130219044709)
+Migrating to AllowNullForPlantId (20130219045315)
+Migrating to ChangedWidthAndHeightType (20130219052828)
+Migrating to AddPropsToPlants (20130219053551)
+Migrating to CreateImages (20130219104340)
+Migrating to AddPlantIdToImages (20130219104445)
+Migrating to AddPaperClipToImages (20130219105155)
+Migrating to CreateGenus (20130221060731)
+Migrating to AddGenuToPlants (20130221093040)
+Migrating to RemoveCategoryIdFromPlants (20130221093403)
+Migrating to AddCategoryIdToPlants (20130222073017)
+Migrating to AddSynonymsToPlants (20130222081813)
+Migrating to AddIsShownInCatalogProp (20130222082524)
+Migrating to RemovePlantTypeFromPlants (20130222083013)
+Migrating to AddSynonymsToGenus (20130222085848)
+Migrating to CreateMembers (20130224141820)
+Migrating to CreateMembersTariffs (20130224150728)
+Migrating to AddTariffToMember (20130224151136)
+Migrating to AddMemberRegions (20130224154550)
+Migrating to CreateMemberCategories (20130225054024)
+Migrating to AddMemberCategoriesRelation (20130225055242)
+Migrating to FixMemberCategoriesRelation (20130225055550)
+Migrating to CreateMemberAddresses (20130225180246)
+Migrating to AddGmapsToAddress (20130226064242)
+Migrating to RenameWrongFieldInAddresses (20130226064726)
+Migrating to RemoveGmapsFromAddresses (20130226065510)
+Migrating to CreateMemberAddressTypes (20130227140930)
+Migrating to ChangeImagesRelations (20130227183245)
+Migrating to AddOwnerIdToImages (20130227184807)
+Migrating to CreatePrices (20130324184248)
+Migrating to CreatePlantPrices (20130324193732)
+Migrating to RenamePriceToMemberPrice (20130406092627)
+Migrating to AddRelationBetweenPlantPriceAndMemberPrice (20130406092845)
+Migrating to RenameTableToPlants (20130527072328)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (92.0ms)[0m  CREATE TEMPORARY TABLE "altered_plants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "lat_name" varchar(255), "description" varchar(255), "width" varchar(255), "height" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "plant_id" integer, "crown" varchar(255), "flowers" varchar(255), "leafs" varchar(255), "genu_id" integer, "plant_category_id" integer, "synonyms" varchar(255), "lat_synonyms" varchar(255), "is_shown_in_catalog" boolean DEFAULT 't') 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_plants_on_plant_id" ON "altered_plants" ("plant_id")[0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "plants"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leafs","genu_id","plant_category_id","synonyms","lat_synonyms","is_shown_in_catalog") VALUES (2, 'Вид_1', 'Вид_1', 'Много таких как вид 1', '6 - 8 м', '6 - 12 м', '2013-03-06 06:52:48.221027', '2013-03-06 18:38:32.813593', NULL, 'от шаровидной до конусовидной', 'жёлто-зелёные, в метёлках, май цв.', 'тёмно-зелёные, осенью жёлтые', 1, 1, '', '', 't')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leafs","genu_id","plant_category_id","synonyms","lat_synonyms","is_shown_in_catalog") VALUES (3, 'Вид_2', 'Вид_2', 'Все такой же хвойный.', '', '', '2013-03-06 06:53:51.948655', '2013-03-06 06:53:51.948655', NULL, '', '', '', 1, 1, '', '', 't')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leafs","genu_id","plant_category_id","synonyms","lat_synonyms","is_shown_in_catalog") VALUES (4, 'Сорт_1_Для_Вид_1', 'Сорт_1_Для_Вид_1', 'Сорт_1_Для_Вид_1 Сорт_1_Для_Вид_1 Сорт_1_Для_Вид_1Сорт_1_Для_Вид_1', '', '', '2013-03-06 06:55:41.626271', '2013-03-06 06:55:41.626271', 2, '', '', '', 1, 1, '', '', 't')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leafs","genu_id","plant_category_id","synonyms","lat_synonyms","is_shown_in_catalog") VALUES (5, 'Сорт_2_Для_Вид_1', 'Сорт_2_Для_Вид_1', 'Сорт_2_Для_Вид_1 Сорт_2_Для_Вид_1 Сорт_2_Для_Вид_1 Сорт_2_Для_Вид_1', '', '', '2013-03-06 06:56:11.447860', '2013-03-06 06:56:11.447860', 2, '', '', '', 1, 1, '', '', 't')
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "plants"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "plants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "lat_name" varchar(255), "description" varchar(255), "width" varchar(255), "height" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "plant_id" integer, "crown" varchar(255), "flowers" varchar(255), "leafs" varchar(255), "genu_id" integer, "plant_category_id" integer, "synonyms" varchar(255), "lat_synonyms" varchar(255), "is_shown_in_catalog" boolean DEFAULT 't') 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_plants_on_plant_id" ON "plants" ("plant_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "altered_plants"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leafs","genu_id","plant_category_id","synonyms","lat_synonyms","is_shown_in_catalog") VALUES (2, 'Вид_1', 'Вид_1', 'Много таких как вид 1', '6 - 8 м', '6 - 12 м', '2013-03-06 06:52:48.221027', '2013-03-06 18:38:32.813593', NULL, 'от шаровидной до конусовидной', 'жёлто-зелёные, в метёлках, май цв.', 'тёмно-зелёные, осенью жёлтые', 1, 1, '', '', 't')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leafs","genu_id","plant_category_id","synonyms","lat_synonyms","is_shown_in_catalog") VALUES (3, 'Вид_2', 'Вид_2', 'Все такой же хвойный.', '', '', '2013-03-06 06:53:51.948655', '2013-03-06 06:53:51.948655', NULL, '', '', '', 1, 1, '', '', 't')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leafs","genu_id","plant_category_id","synonyms","lat_synonyms","is_shown_in_catalog") VALUES (4, 'Сорт_1_Для_Вид_1', 'Сорт_1_Для_Вид_1', 'Сорт_1_Для_Вид_1 Сорт_1_Для_Вид_1 Сорт_1_Для_Вид_1Сорт_1_Для_Вид_1', '', '', '2013-03-06 06:55:41.626271', '2013-03-06 06:55:41.626271', 2, '', '', '', 1, 1, '', '', 't')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leafs","genu_id","plant_category_id","synonyms","lat_synonyms","is_shown_in_catalog") VALUES (5, 'Сорт_2_Для_Вид_1', 'Сорт_2_Для_Вид_1', 'Сорт_2_Для_Вид_1 Сорт_2_Для_Вид_1 Сорт_2_Для_Вид_1 Сорт_2_Для_Вид_1', '', '', '2013-03-06 06:56:11.447860', '2013-03-06 06:56:11.447860', 2, '', '', '', 1, 1, '', '', 't')
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "altered_plants"[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "altered_plants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "lat_name" varchar(255), "description" varchar(255), "width" varchar(255), "height" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "plant_id" integer, "crown" varchar(255), "flowers" varchar(255), "leaves" varchar(255), "genu_id" integer, "plant_category_id" integer, "synonyms" varchar(255), "lat_synonyms" varchar(255), "is_shown_in_catalog" boolean DEFAULT 't') 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_plants_on_plant_id" ON "altered_plants" ("plant_id")[0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "plants"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leaves","genu_id","plant_category_id","synonyms","lat_synonyms","is_shown_in_catalog") VALUES (2, 'Вид_1', 'Вид_1', 'Много таких как вид 1', '6 - 8 м', '6 - 12 м', '2013-03-06 06:52:48.221027', '2013-03-06 18:38:32.813593', NULL, 'от шаровидной до конусовидной', 'жёлто-зелёные, в метёлках, май цв.', 'тёмно-зелёные, осенью жёлтые', 1, 1, '', '', 't')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leaves","genu_id","plant_category_id","synonyms","lat_synonyms","is_shown_in_catalog") VALUES (3, 'Вид_2', 'Вид_2', 'Все такой же хвойный.', '', '', '2013-03-06 06:53:51.948655', '2013-03-06 06:53:51.948655', NULL, '', '', '', 1, 1, '', '', 't')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leaves","genu_id","plant_category_id","synonyms","lat_synonyms","is_shown_in_catalog") VALUES (4, 'Сорт_1_Для_Вид_1', 'Сорт_1_Для_Вид_1', 'Сорт_1_Для_Вид_1 Сорт_1_Для_Вид_1 Сорт_1_Для_Вид_1Сорт_1_Для_Вид_1', '', '', '2013-03-06 06:55:41.626271', '2013-03-06 06:55:41.626271', 2, '', '', '', 1, 1, '', '', 't')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leaves","genu_id","plant_category_id","synonyms","lat_synonyms","is_shown_in_catalog") VALUES (5, 'Сорт_2_Для_Вид_1', 'Сорт_2_Для_Вид_1', 'Сорт_2_Для_Вид_1 Сорт_2_Для_Вид_1 Сорт_2_Для_Вид_1 Сорт_2_Для_Вид_1', '', '', '2013-03-06 06:56:11.447860', '2013-03-06 06:56:11.447860', 2, '', '', '', 1, 1, '', '', 't')
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "plants"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "plants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "lat_name" varchar(255), "description" varchar(255), "width" varchar(255), "height" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "plant_id" integer, "crown" varchar(255), "flowers" varchar(255), "leaves" varchar(255), "genu_id" integer, "plant_category_id" integer, "synonyms" varchar(255), "lat_synonyms" varchar(255), "is_shown_in_catalog" boolean DEFAULT 't') 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_plants_on_plant_id" ON "plants" ("plant_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "altered_plants"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leaves","genu_id","plant_category_id","synonyms","lat_synonyms","is_shown_in_catalog") VALUES (2, 'Вид_1', 'Вид_1', 'Много таких как вид 1', '6 - 8 м', '6 - 12 м', '2013-03-06 06:52:48.221027', '2013-03-06 18:38:32.813593', NULL, 'от шаровидной до конусовидной', 'жёлто-зелёные, в метёлках, май цв.', 'тёмно-зелёные, осенью жёлтые', 1, 1, '', '', 't')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leaves","genu_id","plant_category_id","synonyms","lat_synonyms","is_shown_in_catalog") VALUES (3, 'Вид_2', 'Вид_2', 'Все такой же хвойный.', '', '', '2013-03-06 06:53:51.948655', '2013-03-06 06:53:51.948655', NULL, '', '', '', 1, 1, '', '', 't')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leaves","genu_id","plant_category_id","synonyms","lat_synonyms","is_shown_in_catalog") VALUES (4, 'Сорт_1_Для_Вид_1', 'Сорт_1_Для_Вид_1', 'Сорт_1_Для_Вид_1 Сорт_1_Для_Вид_1 Сорт_1_Для_Вид_1Сорт_1_Для_Вид_1', '', '', '2013-03-06 06:55:41.626271', '2013-03-06 06:55:41.626271', 2, '', '', '', 1, 1, '', '', 't')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leaves","genu_id","plant_category_id","synonyms","lat_synonyms","is_shown_in_catalog") VALUES (5, 'Сорт_2_Для_Вид_1', 'Сорт_2_Для_Вид_1', 'Сорт_2_Для_Вид_1 Сорт_2_Для_Вид_1 Сорт_2_Для_Вид_1 Сорт_2_Для_Вид_1', '', '', '2013-03-06 06:56:11.447860', '2013-03-06 06:56:11.447860', 2, '', '', '', 1, 1, '', '', 't')
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "altered_plants"[0m
+  [1m[35m (0.1ms)[0m  CREATE TEMPORARY TABLE "altered_plants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "lat_name" varchar(255), "description" varchar(255), "width" varchar(255), "height" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "plant_id" integer, "crown" varchar(255), "flowers" varchar(255), "leaves" varchar(255), "genu_id" integer, "plant_category_id" integer, "synonyms" varchar(255), "lat_synonyms" varchar(255), "enabled" boolean DEFAULT 't') 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_plants_on_plant_id" ON "altered_plants" ("plant_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "plants"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leaves","genu_id","plant_category_id","synonyms","lat_synonyms","enabled") VALUES (2, 'Вид_1', 'Вид_1', 'Много таких как вид 1', '6 - 8 м', '6 - 12 м', '2013-03-06 06:52:48.221027', '2013-03-06 18:38:32.813593', NULL, 'от шаровидной до конусовидной', 'жёлто-зелёные, в метёлках, май цв.', 'тёмно-зелёные, осенью жёлтые', 1, 1, '', '', 't')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leaves","genu_id","plant_category_id","synonyms","lat_synonyms","enabled") VALUES (3, 'Вид_2', 'Вид_2', 'Все такой же хвойный.', '', '', '2013-03-06 06:53:51.948655', '2013-03-06 06:53:51.948655', NULL, '', '', '', 1, 1, '', '', 't')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leaves","genu_id","plant_category_id","synonyms","lat_synonyms","enabled") VALUES (4, 'Сорт_1_Для_Вид_1', 'Сорт_1_Для_Вид_1', 'Сорт_1_Для_Вид_1 Сорт_1_Для_Вид_1 Сорт_1_Для_Вид_1Сорт_1_Для_Вид_1', '', '', '2013-03-06 06:55:41.626271', '2013-03-06 06:55:41.626271', 2, '', '', '', 1, 1, '', '', 't')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leaves","genu_id","plant_category_id","synonyms","lat_synonyms","enabled") VALUES (5, 'Сорт_2_Для_Вид_1', 'Сорт_2_Для_Вид_1', 'Сорт_2_Для_Вид_1 Сорт_2_Для_Вид_1 Сорт_2_Для_Вид_1 Сорт_2_Для_Вид_1', '', '', '2013-03-06 06:56:11.447860', '2013-03-06 06:56:11.447860', 2, '', '', '', 1, 1, '', '', 't')
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "plants"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "plants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "lat_name" varchar(255), "description" varchar(255), "width" varchar(255), "height" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "plant_id" integer, "crown" varchar(255), "flowers" varchar(255), "leaves" varchar(255), "genu_id" integer, "plant_category_id" integer, "synonyms" varchar(255), "lat_synonyms" varchar(255), "enabled" boolean DEFAULT 't') 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_plants_on_plant_id" ON "plants" ("plant_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "altered_plants"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leaves","genu_id","plant_category_id","synonyms","lat_synonyms","enabled") VALUES (2, 'Вид_1', 'Вид_1', 'Много таких как вид 1', '6 - 8 м', '6 - 12 м', '2013-03-06 06:52:48.221027', '2013-03-06 18:38:32.813593', NULL, 'от шаровидной до конусовидной', 'жёлто-зелёные, в метёлках, май цв.', 'тёмно-зелёные, осенью жёлтые', 1, 1, '', '', 't')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leaves","genu_id","plant_category_id","synonyms","lat_synonyms","enabled") VALUES (3, 'Вид_2', 'Вид_2', 'Все такой же хвойный.', '', '', '2013-03-06 06:53:51.948655', '2013-03-06 06:53:51.948655', NULL, '', '', '', 1, 1, '', '', 't')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leaves","genu_id","plant_category_id","synonyms","lat_synonyms","enabled") VALUES (4, 'Сорт_1_Для_Вид_1', 'Сорт_1_Для_Вид_1', 'Сорт_1_Для_Вид_1 Сорт_1_Для_Вид_1 Сорт_1_Для_Вид_1Сорт_1_Для_Вид_1', '', '', '2013-03-06 06:55:41.626271', '2013-03-06 06:55:41.626271', 2, '', '', '', 1, 1, '', '', 't')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "plants" ("id","name","lat_name","description","width","height","created_at","updated_at","plant_id","crown","flowers","leaves","genu_id","plant_category_id","synonyms","lat_synonyms","enabled") VALUES (5, 'Сорт_2_Для_Вид_1', 'Сорт_2_Для_Вид_1', 'Сорт_2_Для_Вид_1 Сорт_2_Для_Вид_1 Сорт_2_Для_Вид_1 Сорт_2_Для_Вид_1', '', '', '2013-03-06 06:56:11.447860', '2013-03-06 06:56:11.447860', 2, '', '', '', 1, 1, '', '', 't')
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "altered_plants"[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "plants" ADD "application" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "plants" ADD "description_short" text[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130527072328')
+  [1m[36m (254.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (155.7ms)[0m  DELETE FROM "roles"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Exists (0.2ms)[0m  SELECT 1 AS one FROM "roles" WHERE "roles"."name" = 'admin' LIMIT 1
+  [1m[36mRole Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "roles" WHERE "roles"."title" = 'Администратор' LIMIT 1[0m
+  [1m[35mSQL (66.5ms)[0m  INSERT INTO "roles" ("created_at", "description", "name", "the_role", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 27 May 2013 10:45:24 UTC +00:00], ["description", "Администратор"], ["name", "admin"], ["the_role", "{\"system\":{\"administrator\":true}}"], ["title", "Администратор"], ["updated_at", Mon, 27 May 2013 10:45:24 UTC +00:00]]
+  [1m[36m (153.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mRole Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "roles" WHERE "roles"."name" = 'user' LIMIT 1[0m
+  [1m[35mRole Exists (0.2ms)[0m  SELECT 1 AS one FROM "roles" WHERE "roles"."title" = 'Пользователь' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "roles" ("created_at", "description", "name", "the_role", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:25 UTC +00:00], ["description", "Пользователь"], ["name", "user"], ["the_role", "{\"users\":{\"edit\":true,\"show\":true,\"update\":true}}"], ["title", "Пользователь"], ["updated_at", Mon, 27 May 2013 10:45:25 UTC +00:00]]
+  [1m[35m (157.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Exists (0.3ms)[0m  SELECT 1 AS one FROM "roles" WHERE "roles"."name" = 'seller' LIMIT 1
+  [1m[36mRole Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "roles" WHERE "roles"."title" = 'Продавец' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "roles" ("created_at", "description", "name", "the_role", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 27 May 2013 10:45:25 UTC +00:00], ["description", "Продавец"], ["name", "seller"], ["the_role", "{\"users\":{\"edit\":true,\"show\":true,\"update\":true}}"], ["title", "Продавец"], ["updated_at", Mon, 27 May 2013 10:45:25 UTC +00:00]]
+  [1m[36m (220.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mRole Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "roles" WHERE "roles"."name" = 'nursery' LIMIT 1[0m
+  [1m[35mRole Exists (0.1ms)[0m  SELECT 1 AS one FROM "roles" WHERE "roles"."title" = 'Питомник' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "roles" ("created_at", "description", "name", "the_role", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:25 UTC +00:00], ["description", "Питомник"], ["name", "nursery"], ["the_role", "{\"users\":{\"edit\":true,\"show\":true,\"update\":true}}"], ["title", "Питомник"], ["updated_at", Mon, 27 May 2013 10:45:25 UTC +00:00]]
+  [1m[35m (160.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Exists (0.3ms)[0m  SELECT 1 AS one FROM "roles" WHERE "roles"."name" = 'professional' LIMIT 1
+  [1m[36mRole Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "roles" WHERE "roles"."title" = 'Профессионал рынка' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "roles" ("created_at", "description", "name", "the_role", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 27 May 2013 10:45:25 UTC +00:00], ["description", "Профессионал рынка"], ["name", "professional"], ["the_role", "{\"users\":{\"edit\":true,\"show\":true,\"update\":true}}"], ["title", "Профессионал рынка"], ["updated_at", Mon, 27 May 2013 10:45:25 UTC +00:00]]
+  [1m[36m (222.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (215.6ms)[0m  DELETE FROM "countries"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Россия' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:26 UTC +00:00], ["name", "Россия"], ["updated_at", Mon, 27 May 2013 10:45:26 UTC +00:00]]
+  [1m[35m (174.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Абхазия' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:26 UTC +00:00], ["name", "Абхазия"], ["updated_at", Mon, 27 May 2013 10:45:26 UTC +00:00]]
+  [1m[35m (196.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.1ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Австралия' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:26 UTC +00:00], ["name", "Австралия"], ["updated_at", Mon, 27 May 2013 10:45:26 UTC +00:00]]
+  [1m[35m (145.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Австрия' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:26 UTC +00:00], ["name", "Австрия"], ["updated_at", Mon, 27 May 2013 10:45:26 UTC +00:00]]
+  [1m[35m (176.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Азербайджан' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:26 UTC +00:00], ["name", "Азербайджан"], ["updated_at", Mon, 27 May 2013 10:45:26 UTC +00:00]]
+  [1m[35m (183.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Аргентина' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:27 UTC +00:00], ["name", "Аргентина"], ["updated_at", Mon, 27 May 2013 10:45:27 UTC +00:00]]
+  [1m[35m (249.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.4ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Армения' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:27 UTC +00:00], ["name", "Армения"], ["updated_at", Mon, 27 May 2013 10:45:27 UTC +00:00]]
+  [1m[35m (166.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.4ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Беларусь' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:27 UTC +00:00], ["name", "Беларусь"], ["updated_at", Mon, 27 May 2013 10:45:27 UTC +00:00]]
+  [1m[35m (181.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Белиз' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:27 UTC +00:00], ["name", "Белиз"], ["updated_at", Mon, 27 May 2013 10:45:27 UTC +00:00]]
+  [1m[35m (175.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Бельгия' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:27 UTC +00:00], ["name", "Бельгия"], ["updated_at", Mon, 27 May 2013 10:45:27 UTC +00:00]]
+  [1m[35m (175.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Болгария' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:28 UTC +00:00], ["name", "Болгария"], ["updated_at", Mon, 27 May 2013 10:45:28 UTC +00:00]]
+  [1m[35m (150.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.4ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Бразилия' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:28 UTC +00:00], ["name", "Бразилия"], ["updated_at", Mon, 27 May 2013 10:45:28 UTC +00:00]]
+  [1m[35m (160.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.2ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Великобритания' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:28 UTC +00:00], ["name", "Великобритания"], ["updated_at", Mon, 27 May 2013 10:45:28 UTC +00:00]]
+  [1m[35m (135.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Венгрия' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:28 UTC +00:00], ["name", "Венгрия"], ["updated_at", Mon, 27 May 2013 10:45:28 UTC +00:00]]
+  [1m[35m (199.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.1ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Вьетнам' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:28 UTC +00:00], ["name", "Вьетнам"], ["updated_at", Mon, 27 May 2013 10:45:28 UTC +00:00]]
+  [1m[35m (269.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.1ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Гаити' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:28 UTC +00:00], ["name", "Гаити"], ["updated_at", Mon, 27 May 2013 10:45:28 UTC +00:00]]
+  [1m[35m (159.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Гваделупа' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:29 UTC +00:00], ["name", "Гваделупа"], ["updated_at", Mon, 27 May 2013 10:45:29 UTC +00:00]]
+  [1m[35m (183.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Германия' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:29 UTC +00:00], ["name", "Германия"], ["updated_at", Mon, 27 May 2013 10:45:29 UTC +00:00]]
+  [1m[35m (183.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Голландия' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:29 UTC +00:00], ["name", "Голландия"], ["updated_at", Mon, 27 May 2013 10:45:29 UTC +00:00]]
+  [1m[35m (167.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Греция' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:29 UTC +00:00], ["name", "Греция"], ["updated_at", Mon, 27 May 2013 10:45:29 UTC +00:00]]
+  [1m[35m (150.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.1ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Грузия' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:29 UTC +00:00], ["name", "Грузия"], ["updated_at", Mon, 27 May 2013 10:45:29 UTC +00:00]]
+  [1m[35m (188.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Дания' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:30 UTC +00:00], ["name", "Дания"], ["updated_at", Mon, 27 May 2013 10:45:30 UTC +00:00]]
+  [1m[35m (273.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Израиль' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:30 UTC +00:00], ["name", "Израиль"], ["updated_at", Mon, 27 May 2013 10:45:30 UTC +00:00]]
+  [1m[35m (191.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Египет' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:30 UTC +00:00], ["name", "Египет"], ["updated_at", Mon, 27 May 2013 10:45:30 UTC +00:00]]
+  [1m[35m (182.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.4ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Индия' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:30 UTC +00:00], ["name", "Индия"], ["updated_at", Mon, 27 May 2013 10:45:30 UTC +00:00]]
+  [1m[35m (175.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.1ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Иран' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:30 UTC +00:00], ["name", "Иран"], ["updated_at", Mon, 27 May 2013 10:45:30 UTC +00:00]]
+  [1m[35m (186.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Ирландия' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:31 UTC +00:00], ["name", "Ирландия"], ["updated_at", Mon, 27 May 2013 10:45:31 UTC +00:00]]
+  [1m[35m (174.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Испания' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:31 UTC +00:00], ["name", "Испания"], ["updated_at", Mon, 27 May 2013 10:45:31 UTC +00:00]]
+  [1m[35m (215.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Италия' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:31 UTC +00:00], ["name", "Италия"], ["updated_at", Mon, 27 May 2013 10:45:31 UTC +00:00]]
+  [1m[35m (248.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.4ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Казахстан' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:31 UTC +00:00], ["name", "Казахстан"], ["updated_at", Mon, 27 May 2013 10:45:31 UTC +00:00]]
+  [1m[35m (208.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.2ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Камерун' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:31 UTC +00:00], ["name", "Камерун"], ["updated_at", Mon, 27 May 2013 10:45:31 UTC +00:00]]
+  [1m[35m (168.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.1ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Канада' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:32 UTC +00:00], ["name", "Канада"], ["updated_at", Mon, 27 May 2013 10:45:32 UTC +00:00]]
+  [1m[35m (170.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Кипр' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:32 UTC +00:00], ["name", "Кипр"], ["updated_at", Mon, 27 May 2013 10:45:32 UTC +00:00]]
+  [1m[35m (183.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Киргызстан' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:32 UTC +00:00], ["name", "Киргызстан"], ["updated_at", Mon, 27 May 2013 10:45:32 UTC +00:00]]
+  [1m[35m (142.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Китай' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:32 UTC +00:00], ["name", "Китай"], ["updated_at", Mon, 27 May 2013 10:45:32 UTC +00:00]]
+  [1m[35m (166.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Коста-Рика' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:32 UTC +00:00], ["name", "Коста-Рика"], ["updated_at", Mon, 27 May 2013 10:45:32 UTC +00:00]]
+  [1m[35m (199.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Кувейт' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:33 UTC +00:00], ["name", "Кувейт"], ["updated_at", Mon, 27 May 2013 10:45:33 UTC +00:00]]
+  [1m[35m (150.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.2ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Латвия' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:33 UTC +00:00], ["name", "Латвия"], ["updated_at", Mon, 27 May 2013 10:45:33 UTC +00:00]]
+  [1m[35m (205.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Ливия' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:33 UTC +00:00], ["name", "Ливия"], ["updated_at", Mon, 27 May 2013 10:45:33 UTC +00:00]]
+  [1m[35m (295.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Литва' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:33 UTC +00:00], ["name", "Литва"], ["updated_at", Mon, 27 May 2013 10:45:33 UTC +00:00]]
+  [1m[35m (191.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Люксембург' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:33 UTC +00:00], ["name", "Люксембург"], ["updated_at", Mon, 27 May 2013 10:45:33 UTC +00:00]]
+  [1m[35m (215.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.1ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Мексика' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:34 UTC +00:00], ["name", "Мексика"], ["updated_at", Mon, 27 May 2013 10:45:34 UTC +00:00]]
+  [1m[35m (195.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Молдова' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:34 UTC +00:00], ["name", "Молдова"], ["updated_at", Mon, 27 May 2013 10:45:34 UTC +00:00]]
+  [1m[35m (158.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Монако' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:34 UTC +00:00], ["name", "Монако"], ["updated_at", Mon, 27 May 2013 10:45:34 UTC +00:00]]
+  [1m[35m (183.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Новая Зеландия' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:34 UTC +00:00], ["name", "Новая Зеландия"], ["updated_at", Mon, 27 May 2013 10:45:34 UTC +00:00]]
+  [1m[35m (248.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.1ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Норвегия' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:34 UTC +00:00], ["name", "Норвегия"], ["updated_at", Mon, 27 May 2013 10:45:34 UTC +00:00]]
+  [1m[35m (164.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Польша' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:35 UTC +00:00], ["name", "Польша"], ["updated_at", Mon, 27 May 2013 10:45:35 UTC +00:00]]
+  [1m[35m (166.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Португалия' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:35 UTC +00:00], ["name", "Португалия"], ["updated_at", Mon, 27 May 2013 10:45:35 UTC +00:00]]
+  [1m[35m (135.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Реюньон' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:35 UTC +00:00], ["name", "Реюньон"], ["updated_at", Mon, 27 May 2013 10:45:35 UTC +00:00]]
+  [1m[35m (150.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.4ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Сальвадор' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:35 UTC +00:00], ["name", "Сальвадор"], ["updated_at", Mon, 27 May 2013 10:45:35 UTC +00:00]]
+  [1m[35m (191.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Словакия' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:35 UTC +00:00], ["name", "Словакия"], ["updated_at", Mon, 27 May 2013 10:45:35 UTC +00:00]]
+  [1m[35m (174.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Словения' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:35 UTC +00:00], ["name", "Словения"], ["updated_at", Mon, 27 May 2013 10:45:35 UTC +00:00]]
+  [1m[35m (183.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Суринам' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:36 UTC +00:00], ["name", "Суринам"], ["updated_at", Mon, 27 May 2013 10:45:36 UTC +00:00]]
+  [1m[35m (166.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.1ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'США' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:36 UTC +00:00], ["name", "США"], ["updated_at", Mon, 27 May 2013 10:45:36 UTC +00:00]]
+  [1m[35m (146.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Таджикистан' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:36 UTC +00:00], ["name", "Таджикистан"], ["updated_at", Mon, 27 May 2013 10:45:36 UTC +00:00]]
+  [1m[35m (176.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.4ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Туркменистан' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:36 UTC +00:00], ["name", "Туркменистан"], ["updated_at", Mon, 27 May 2013 10:45:36 UTC +00:00]]
+  [1m[35m (265.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Туркс и Кейкос' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:36 UTC +00:00], ["name", "Туркс и Кейкос"], ["updated_at", Mon, 27 May 2013 10:45:36 UTC +00:00]]
+  [1m[35m (166.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.4ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Турция' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:37 UTC +00:00], ["name", "Турция"], ["updated_at", Mon, 27 May 2013 10:45:37 UTC +00:00]]
+  [1m[35m (174.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Уганда' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:37 UTC +00:00], ["name", "Уганда"], ["updated_at", Mon, 27 May 2013 10:45:37 UTC +00:00]]
+  [1m[35m (158.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.1ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Узбекистан' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:37 UTC +00:00], ["name", "Узбекистан"], ["updated_at", Mon, 27 May 2013 10:45:37 UTC +00:00]]
+  [1m[35m (168.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Украина' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:37 UTC +00:00], ["name", "Украина"], ["updated_at", Mon, 27 May 2013 10:45:37 UTC +00:00]]
+  [1m[35m (158.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Финляндия' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:37 UTC +00:00], ["name", "Финляндия"], ["updated_at", Mon, 27 May 2013 10:45:37 UTC +00:00]]
+  [1m[35m (157.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Франция' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:37 UTC +00:00], ["name", "Франция"], ["updated_at", Mon, 27 May 2013 10:45:37 UTC +00:00]]
+  [1m[35m (322.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.1ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Чехия' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:38 UTC +00:00], ["name", "Чехия"], ["updated_at", Mon, 27 May 2013 10:45:38 UTC +00:00]]
+  [1m[35m (188.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.1ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Швейцария' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:38 UTC +00:00], ["name", "Швейцария"], ["updated_at", Mon, 27 May 2013 10:45:38 UTC +00:00]]
+  [1m[35m (138.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.2ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Швеция' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:38 UTC +00:00], ["name", "Швеция"], ["updated_at", Mon, 27 May 2013 10:45:38 UTC +00:00]]
+  [1m[35m (143.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Эстония' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:38 UTC +00:00], ["name", "Эстония"], ["updated_at", Mon, 27 May 2013 10:45:38 UTC +00:00]]
+  [1m[35m (158.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Югославия' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:38 UTC +00:00], ["name", "Югославия"], ["updated_at", Mon, 27 May 2013 10:45:38 UTC +00:00]]
+  [1m[35m (199.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Южная Корея' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:39 UTC +00:00], ["name", "Южная Корея"], ["updated_at", Mon, 27 May 2013 10:45:39 UTC +00:00]]
+  [1m[35m (175.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT 1 AS one FROM "countries" WHERE "countries"."name" = 'Япония' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "countries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 27 May 2013 10:45:39 UTC +00:00], ["name", "Япония"], ["updated_at", Mon, 27 May 2013 10:45:39 UTC +00:00]]
+  [1m[35m (158.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mMemberTariff Exists (0.1ms)[0m  SELECT 1 AS one FROM "member_tariffs" WHERE "member_tariffs"."name" = 'Простой' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mMemberTariff Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "member_tariffs" WHERE "member_tariffs"."name" = 'Оптовик' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mMemberTariff Exists (0.4ms)[0m  SELECT 1 AS one FROM "member_tariffs" WHERE "member_tariffs"."name" = 'Оптовик PRO' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "member_address_types" ("description", "name") VALUES (?, ?)[0m  [["description", nil], ["name", "Офис"]]
+  [1m[35m (195.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "member_address_types" ("description", "name") VALUES (?, ?)  [["description", nil], ["name", "Площадка"]]
+  [1m[36m (167.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "member_address_types" ("description", "name") VALUES (?, ?)[0m  [["description", nil], ["name", "Теплица"]]
+  [1m[35m (277.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "member_address_types" ("description", "name") VALUES (?, ?)  [["description", nil], ["name", "Питомник"]]
+  [1m[36m (185.4ms)[0m  [1mcommit transaction[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130206080807)
+Migrating to AddDeviseToUsers (20130207045441)
+Migrating to AddContactsToUser (20130208083729)
+Migrating to AddRoleIdToUser (20130208130621)
+Migrating to CreateRoles (20130208130659)
+Migrating to AddDefaultValueForUserRole (20130208145646)
+Migrating to CreateCountries (20130208162036)
+Migrating to CreateRegions (20130212074226)
+Migrating to CreatePlantFeatures (20130212110630)
+Migrating to CreatePlantCategories (20130212122216)
+Migrating to AddedParentToPlantCategory (20130212130309)
+Migrating to CreatePlants (20130218183601)
+Migrating to AddCategoryIdToPlant (20130219043924)
+Migrating to AddParentIdToPlant (20130219044709)
+Migrating to AllowNullForPlantId (20130219045315)
+Migrating to ChangedWidthAndHeightType (20130219052828)
+Migrating to AddPropsToPlants (20130219053551)
+Migrating to CreateImages (20130219104340)
+Migrating to AddPlantIdToImages (20130219104445)
+Migrating to AddPaperClipToImages (20130219105155)
+Migrating to CreateGenus (20130221060731)
+Migrating to AddGenuToPlants (20130221093040)
+Migrating to RemoveCategoryIdFromPlants (20130221093403)
+Migrating to AddCategoryIdToPlants (20130222073017)
+Migrating to AddSynonymsToPlants (20130222081813)
+Migrating to AddIsShownInCatalogProp (20130222082524)
+Migrating to RemovePlantTypeFromPlants (20130222083013)
+Migrating to AddSynonymsToGenus (20130222085848)
+Migrating to CreateMembers (20130224141820)
+Migrating to CreateMembersTariffs (20130224150728)
+Migrating to AddTariffToMember (20130224151136)
+Migrating to AddMemberRegions (20130224154550)
+Migrating to CreateMemberCategories (20130225054024)
+Migrating to AddMemberCategoriesRelation (20130225055242)
+Migrating to FixMemberCategoriesRelation (20130225055550)
+Migrating to CreateMemberAddresses (20130225180246)
+Migrating to AddGmapsToAddress (20130226064242)
+Migrating to RenameWrongFieldInAddresses (20130226064726)
+Migrating to RemoveGmapsFromAddresses (20130226065510)
+Migrating to CreateMemberAddressTypes (20130227140930)
+Migrating to ChangeImagesRelations (20130227183245)
+Migrating to AddOwnerIdToImages (20130227184807)
+Migrating to CreatePrices (20130324184248)
+Migrating to CreatePlantPrices (20130324193732)
+Migrating to RenamePriceToMemberPrice (20130406092627)
+Migrating to AddRelationBetweenPlantPriceAndMemberPrice (20130406092845)
+Migrating to RenameTableToPlants (20130527072328)
+Migrating to ChangeTableToCategories (20130527125737)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130206080807)
+Migrating to AddDeviseToUsers (20130207045441)
+Migrating to AddContactsToUser (20130208083729)
+Migrating to AddRoleIdToUser (20130208130621)
+Migrating to CreateRoles (20130208130659)
+Migrating to AddDefaultValueForUserRole (20130208145646)
+Migrating to CreateCountries (20130208162036)
+Migrating to CreateRegions (20130212074226)
+Migrating to CreatePlantFeatures (20130212110630)
+Migrating to CreatePlantCategories (20130212122216)
+Migrating to AddedParentToPlantCategory (20130212130309)
+Migrating to CreatePlants (20130218183601)
+Migrating to AddCategoryIdToPlant (20130219043924)
+Migrating to AddParentIdToPlant (20130219044709)
+Migrating to AllowNullForPlantId (20130219045315)
+Migrating to ChangedWidthAndHeightType (20130219052828)
+Migrating to AddPropsToPlants (20130219053551)
+Migrating to CreateImages (20130219104340)
+Migrating to AddPlantIdToImages (20130219104445)
+Migrating to AddPaperClipToImages (20130219105155)
+Migrating to CreateGenus (20130221060731)
+Migrating to AddGenuToPlants (20130221093040)
+Migrating to RemoveCategoryIdFromPlants (20130221093403)
+Migrating to AddCategoryIdToPlants (20130222073017)
+Migrating to AddSynonymsToPlants (20130222081813)
+Migrating to AddIsShownInCatalogProp (20130222082524)
+Migrating to RemovePlantTypeFromPlants (20130222083013)
+Migrating to AddSynonymsToGenus (20130222085848)
+Migrating to CreateMembers (20130224141820)
+Migrating to CreateMembersTariffs (20130224150728)
+Migrating to AddTariffToMember (20130224151136)
+Migrating to AddMemberRegions (20130224154550)
+Migrating to CreateMemberCategories (20130225054024)
+Migrating to AddMemberCategoriesRelation (20130225055242)
+Migrating to FixMemberCategoriesRelation (20130225055550)
+Migrating to CreateMemberAddresses (20130225180246)
+Migrating to AddGmapsToAddress (20130226064242)
+Migrating to RenameWrongFieldInAddresses (20130226064726)
+Migrating to RemoveGmapsFromAddresses (20130226065510)
+Migrating to CreateMemberAddressTypes (20130227140930)
+Migrating to ChangeImagesRelations (20130227183245)
+Migrating to AddOwnerIdToImages (20130227184807)
+Migrating to CreatePrices (20130324184248)
+Migrating to CreatePlantPrices (20130324193732)
+Migrating to RenamePriceToMemberPrice (20130406092627)
+Migrating to AddRelationBetweenPlantPriceAndMemberPrice (20130406092845)
+Migrating to RenameTableToPlants (20130527072328)
+Migrating to ChangeTableToCategories (20130527125737)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TEMPORARY TABLE "altered_plant_categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "lat_name" varchar(255), "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "parent_category_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_plant_categories_on_plant_category_id" ON "altered_plant_categories" ("parent_category_id")[0m
+  [1m[35m (18.1ms)[0m  SELECT * FROM "plant_categories"
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "altered_plant_categories" ("id","name","lat_name","description","created_at","updated_at","parent_category_id") VALUES (1, 'Хвойные', 'Хвойные', 'Хвойные душистые растения', '2013-03-06 06:48:54.628502', '2013-03-06 06:48:54.628502', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_plant_categories" ("id","name","lat_name","description","created_at","updated_at","parent_category_id") VALUES (2, 'Не хвойные', 'Не хвойные', 'Не хвойные, но такиеже душистые растения.', '2013-03-06 06:49:12.749050', '2013-03-06 06:49:12.749050', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_plant_categories" ("id","name","lat_name","description","created_at","updated_at","parent_category_id") VALUES (3, 'Лиственные деревья и кустарники', 'Лиственные деревья и кустарники', 'Просто кусты, много кустов.', '2013-03-06 06:49:28.164439', '2013-03-06 06:49:28.164439', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_plant_categories" ("id","name","lat_name","description","created_at","updated_at","parent_category_id") VALUES (4, 'Дочка кустов', 'Дочка кустов', 'Очень красивые дочки у кустов.', '2013-03-06 06:49:43.564300', '2013-03-06 06:49:43.564300', 3)
+  [1m[36m (63.2ms)[0m  [1mDROP TABLE "plant_categories"[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "plant_categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "lat_name" varchar(255), "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "parent_category_id" integer) 
+  [1m[36m (0.2ms)[0m  [1mCREATE INDEX "index_plant_categories_on_plant_category_id" ON "plant_categories" ("parent_category_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "altered_plant_categories"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "plant_categories" ("id","name","lat_name","description","created_at","updated_at","parent_category_id") VALUES (1, 'Хвойные', 'Хвойные', 'Хвойные душистые растения', '2013-03-06 06:48:54.628502', '2013-03-06 06:48:54.628502', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "plant_categories" ("id","name","lat_name","description","created_at","updated_at","parent_category_id") VALUES (2, 'Не хвойные', 'Не хвойные', 'Не хвойные, но такиеже душистые растения.', '2013-03-06 06:49:12.749050', '2013-03-06 06:49:12.749050', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "plant_categories" ("id","name","lat_name","description","created_at","updated_at","parent_category_id") VALUES (3, 'Лиственные деревья и кустарники', 'Лиственные деревья и кустарники', 'Просто кусты, много кустов.', '2013-03-06 06:49:28.164439', '2013-03-06 06:49:28.164439', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "plant_categories" ("id","name","lat_name","description","created_at","updated_at","parent_category_id") VALUES (4, 'Дочка кустов', 'Дочка кустов', 'Очень красивые дочки у кустов.', '2013-03-06 06:49:43.564300', '2013-03-06 06:49:43.564300', 3)
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "altered_plant_categories"[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130527125737')
+  [1m[36m (782.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 

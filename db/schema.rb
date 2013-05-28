@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130406092845) do
+ActiveRecord::Schema.define(:version => 20130527125737) do
 
   create_table "countries", :force => true do |t|
     t.string   "name"
@@ -123,12 +123,12 @@ ActiveRecord::Schema.define(:version => 20130406092845) do
     t.string   "name"
     t.string   "lat_name"
     t.text     "description"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
-    t.integer  "plant_category_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.integer  "parent_category_id"
   end
 
-  add_index "plant_categories", ["plant_category_id"], :name => "index_plant_categories_on_plant_category_id"
+  add_index "plant_categories", ["parent_category_id"], :name => "index_plant_categories_on_plant_category_id"
 
   create_table "plant_features", :force => true do |t|
     t.string   "name"
@@ -154,17 +154,19 @@ ActiveRecord::Schema.define(:version => 20130406092845) do
     t.string   "description"
     t.string   "width"
     t.string   "height"
-    t.datetime "created_at",                            :null => false
-    t.datetime "updated_at",                            :null => false
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
     t.integer  "plant_id"
-    t.string   "krone"
+    t.string   "crown"
     t.string   "flowers"
-    t.string   "leafs"
+    t.string   "leaves"
     t.integer  "genu_id"
     t.integer  "plant_category_id"
     t.string   "synonyms"
     t.string   "lat_synonyms"
-    t.boolean  "is_shown_in_catalog", :default => true
+    t.boolean  "enabled",           :default => true
+    t.string   "application"
+    t.text     "description_short"
   end
 
   add_index "plants", ["plant_id"], :name => "index_plants_on_plant_id"

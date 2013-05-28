@@ -1,28 +1,28 @@
-CREATE TABLE `category` (
-  `category_id` int(11) NOT NULL auto_increment,
+CREATE TABLE `plant_categories` (
+  `id` int(11) NOT NULL ,
   `parent_category_id` int(11),
-  `name_lat` varchar(100) NOT NULL,
-  `name_rus` varchar(100) ,
+  `lat_name` varchar(100) NOT NULL,
+  `name` varchar(100) ,
   `description` varchar(1000),
-  PRIMARY KEY  (`category_id`)
-) AUTO_INCREMENT=6;
+  PRIMARY KEY  (`id`)
+);
 
 CREATE TABLE `genus` (
-  `genus_id` int(11) NOT NULL auto_increment,
-  `category_id` int(11) NOT NULL,
-  `name_lat` varchar(100) NOT NULL,
-  `name_rus` varchar(100),
+  `id` int(11) NOT NULL ,
+  `plant_category_id` int(11) NOT NULL,
+  `lat_name` varchar(100) NOT NULL,
+  `name` varchar(100),
   `description` text,
   `synonym` text,
-  PRIMARY KEY  (`genus_id`)
-) AUTO_INCREMENT=487;
+  PRIMARY KEY  (`id`)
+);
 
-CREATE TABLE `plant` (
-  `plant_id` int(11) NOT NULL auto_increment,
+CREATE TABLE `plants` (
+  `id` int(11) NOT NULL ,
   `parent_id` int(11),
   `genus_id` int(11) NOT NULL,
-  `name_lat` varchar(100) NOT NULL,
-  `name_rus` varchar(100),
+  `lat_name` varchar(100) NOT NULL,
+  `name` varchar(100),
   `width` varchar(50),
   `height` varchar(50),
   `crown` varchar(50),
@@ -33,7 +33,7 @@ CREATE TABLE `plant` (
   `description_short` text,
   `application` text,
   `enabled` int(3) NOT NULL default '0',
-  `creation_date` timestamp NOT NULL  default CURRENT_TIMESTAMP,
-  `modification_date` timestamp ,
-  PRIMARY KEY  (`plant_id`)
-) AUTO_INCREMENT=2287;
+  `created_at` timestamp NOT NULL  default CURRENT_TIMESTAMP,
+  `updated_at` timestamp ,
+  PRIMARY KEY  (`id`)
+);
