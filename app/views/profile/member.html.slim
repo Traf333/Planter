@@ -56,7 +56,7 @@ script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGWSI8xlBZIb9GX1p_
                 a.remove-region-btn.btn.btn-danger.btn-small Удалить
           - else
             .region
-              = select_tag 'countries', options_from_collection_for_select(Country.all, :id, :name), onchange => 'loadRegions(this)' 
+              = select_tag 'countries', options_from_collection_for_select(Country.all, :id, :name), :onchange => 'loadRegions(this)' 
               = select_tag "member[region_ids][]", options_from_collection_for_select(Region.all, :id, :name), :class => 'regions-select'
         a.btn onclick="addMemberRegion()"
       legend Адреса

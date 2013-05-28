@@ -8,9 +8,9 @@
   fieldset
     legend
     .control-group
-      label.control-label= f.label :plant_category
+      label.control-label= f.label :parent_category
       .controls
-        = f.select :plant_category_id, categories_list, :include_blank => 'Не выбрано'
+        = f.select :parent_category_id, categories_list, :include_blank => 'Не выбрано'
     .control-group
       label.control-label= f.label :name
       .controls

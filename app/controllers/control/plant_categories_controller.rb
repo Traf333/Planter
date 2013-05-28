@@ -18,7 +18,7 @@ module Control
           @plant_categories.reverse!
 
         when 'parent' then
-          @plant_categories = PlantCategory.where(:plant_category_id => params[:id])
+          @plant_categories = PlantCategory.where(:parent_category_id => params[:id])
         else
           @plant_categories = PlantCategory.order("#{sort_column} #{sort_direction}").make_categories_tree_hash
       end
@@ -44,7 +44,7 @@ module Control
     # GET /plant_categories/new
     # GET /plant_categories/new.json
     def new
-      @plant_category = PlantCategory.new(:plant_category_id => params[:plant_category_id])
+      @plant_category = PlantCategory.new(:parent_category_id => params[:parent_category_id])
 
       respond_to do |format|
         format.html # new.html.erb

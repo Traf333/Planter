@@ -38,7 +38,7 @@ ru:
         name: "Название"
         lat_name: "Латинское название"
         description: "Описание"
-        plant_category: "Родитель"
+        parent_category: "Родитель"
         messages:
           has_been_success_created: "Категория успешно добавлена."
           has_been_success_updated: "Категория успешно обновлена."
@@ -51,13 +51,13 @@ ru:
         plant_category_id: "Категория"
         plant_id: "Родитель"
         plant_type: "Тип"
-        krone: "Крона"
-        leafs: "Листья"
+        crown: "Крона"
+        leaves: "Листья"
         flowers: "Цветы"
         genu: 'Род'
         synonyms: "Рус. синонимы"
         lat_synonyms: "Лат. синонимы"
-        is_shown_in_catalog: "Показывать в каталоге?"
+        enabled: "Показывать в каталоге?"
         messages:
           has_been_success_created: "Растение успешно добавлено."
           has_been_success_updated: "Растение успешно обновлено."

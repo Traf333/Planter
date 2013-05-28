@@ -7,13 +7,13 @@ class Plant < ActiveRecord::Base
   has_many :images, :foreign_key => :owner_id, :dependent => :destroy
   has_many :plant_prices, :dependent => :destroy
 
-  scope :moderated, lambda { where(:is_shown_in_catalog => true) }
+  scope :moderated, lambda { where(:enabled => true) }
   scope :only_parents, lambda { where(:plant_id => nil) }
 
-  attr_accessible :description, :height, :lat_name, :name, :width, :plant_id,
-                  :krone, :leafs, :flowers, :genu_id, :plant_category_id
+  attr_accessible :description, :description_short, :application, :height, :lat_name, :name, :width, :plant_id,
+                  :crown, :leaves, :flowers, :genu_id, :plant_category_id
   attr_accessible :synonyms, :lat_synonyms
-  attr_accessible :is_shown_in_catalog
+  attr_accessible :enabled
 
   validates :name, :lat_name, :presence => true, :uniqueness => true
 

@@ -33,9 +33,9 @@
       .controls
         = f.text_field :lat_name
     .control-group
-      label.control-label= f.label :is_shown_in_catalog
+      label.control-label= f.label :enabled
       .controls
-        = f.check_box :is_shown_in_catalog
+        = f.check_box :enabled
     .control-group
       label.control-label= f.label :description
       .controls
@@ -50,13 +50,13 @@
         = f.text_field :height, :placeholder => '3 м - 5 м'
     legend
     .control-group
-      label.control-label= f.label :krone
+      label.control-label= f.label :crown
       .controls
-        = f.text_field :krone
+        = f.text_field :crown
     .control-group
-      label.control-label= f.label :leafs
+      label.control-label= f.label :leaves
       .controls
-        = f.text_field :leafs
+        = f.text_field :leaves
     .control-group
       label.control-label= f.label :flowers
       .controls

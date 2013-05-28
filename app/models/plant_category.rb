@@ -3,11 +3,11 @@ class PlantCategory < ActiveRecord::Base
   has_many :genus
   has_many :plants
 
-  scope :roots, lambda { where(:plant_category_id => nil ) }
-  scope :children, lambda { |id| where(:plant_category_id => id) }
+  scope :roots, lambda { where(:parent_category_id => nil ) }
+  scope :children, lambda { |id| where(:parent_category_id => id) }
 
   attr_accessible :description, :lat_name, :name
-  attr_accessible :plant_category_id
+  attr_accessible :parent_category_id
 
   validates :name, :lat_name, :presence => true, :uniqueness => true
 
